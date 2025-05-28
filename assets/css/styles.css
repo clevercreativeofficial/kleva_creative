@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+::selection{
+  background-color: #74826059;
+  color: #414b33;
+}
+
+h1, h2, h3, h4{
+    font-family: "Poppins", sans-serif;
+}
+
+/* p{
+    font-family: "Lato", sans-serif;
+} */
+
+.main{
+    background-image: linear-gradient(#000000f1, #000000ee), url("/assets/images/photo-1733085896817-1ba77436c393.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: normal;
+}
+
+
+/* Custom Dots */
+.slick-dots {
+    bottom: -55px !important; /* Adjust the position of the dots */
+  }
+
+  .slick-dots li button:before {
+    color: #15803D !important; /* Gold color for inactive dots */
+    opacity: 0.3; /* Make inactive dots slightly transparent */
+    font-size: 12px; /* Adjust dot size */
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #15803D; /* Gold color for active dot */
+    opacity: 1; /* Make active dot fully visible */
+  }
+
+  /* Add Gaps Between Slides */
+  /*.slick-slide {
+    margin: 0 10px; Add 10px gap between slides
+  }*/
+
+  .slick-list {
+    margin: 0 -10px; /* Compensate for the gap */
+  }
