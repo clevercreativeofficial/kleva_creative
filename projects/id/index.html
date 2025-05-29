@@ -28,6 +28,7 @@
     <!-- Custom style -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -40,10 +41,10 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-900">
 
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
             <div class="animate-bounce">
                 <img class="w-16 animate-pulse" src="assets/images/logo.svg" alt="">
@@ -55,9 +56,26 @@
         class="overlay md:translate-x-full translate-x-[750px] duration-300 bg-gray-900 bg-opacity-75 fixed top-0 left-0 w-full h-screen z-50">
     </div>
 
+    <!-- theme toggler -->
+    <div class="fixed md:bottom-20 bottom-10 right-0 w-full z-[100]">
+        <div class="max-w-[1200px] m-auto md:px-10 px-3 flex justify-end items-center">
+            <div id="themeToggle"
+                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+
+                <span class="sun">
+                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
+                </span>
+                <span class="moon hidden">
+                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
     <!-- navbar -->
     <nav
-        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 border-b border-gray-100 z-50">
+        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white dark:bg-gray-800 bg-opacity-75 dark:bg-opacity-75 border-b border-gray-100 dark:border-gray-700 z-50">
         <!-- container -->
         <div class="max-w-[1200px] m-auto px-3 flex justify-between items-center">
             <div class="w-10 py-4">
@@ -67,7 +85,7 @@
             </div>
 
             <ul id="navItems"
-                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
+                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white dark:bg-gray-800 md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 dark:text-gray-300 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
                 <div class="md:hidden block w-32 pb-4">
                     <a href="/">
                         <img src="/assets/images/logo/logo_color.svg" alt="logo">
@@ -93,13 +111,15 @@
     </nav>
 
     <!-- Project Hero -->
-    <section class="text-gray-600">
+    <section class="text-gray-600 dark:text-gray-300">
         <div class="max-w-[1200px] mx-auto px-3 py-20">
             <div class="flex flex-col lg:flex-row gap-10 items-center">
                 <div class="lg:w-1/2">
-                    <span class="inline-block bg-gray-600/20 text-sm px-4 py-1 rounded-full mb-4">Web Design &
+                    <span
+                        class="inline-block bg-gray-600/20 dark:bg-gray-300/20 text-sm px-4 py-1 rounded-full mb-4">Web
+                        Design &
                         Development</span>
-                    <h1 class="text-4xl font-bold mb-6">Eco Market: Sustainable E-Commerce Platform</h1>
+                    <h1 class="text-4xl font-bold mb-6 dark:text-white">Eco Market: Sustainable E-Commerce Platform</h1>
                     <p class="text-lg opacity-90 mb-8">
                         A complete redesign of an e-commerce platform specializing in sustainable products,
                         focusing on intuitive navigation and a clean, earthy aesthetic that reflects the brand's values.
@@ -107,15 +127,15 @@
                     <div class="flex flex-wrap gap-6">
                         <div>
                             <span class="block text-sm opacity-80">Client</span>
-                            <span class="font-medium">Eco Market Inc.</span>
+                            <span class="font-medium dark:text-white">Eco Market Inc.</span>
                         </div>
                         <div>
                             <span class="block text-sm opacity-80">Year</span>
-                            <span class="font-medium">2023</span>
+                            <span class="font-medium dark:text-white">2023</span>
                         </div>
                         <div>
                             <span class="block text-sm opacity-80">Services</span>
-                            <span class="font-medium">UI/UX Design, Web Development</span>
+                            <span class="font-medium dark:text-white">UI/UX Design, Web Development</span>
                         </div>
                     </div>
                 </div>
@@ -128,12 +148,12 @@
     </section>
 
     <!-- Project Overview -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-800 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="md:col-span-2">
-                    <h2 class="text-3xl font-semibold text-gray-700 mb-6">Project Overview</h2>
-                    <div class="prose max-w-none text-gray-600">
+                    <h2 class="text-3xl font-semibold text-gray-700 dark:text-white mb-6">Project Overview</h2>
+                    <div class="prose max-w-none text-gray-600 dark:text-gray-300">
                         <p>
                             Eco Market approached me with the challenge of redesigning their outdated e-commerce
                             platform.
@@ -157,32 +177,32 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bg-gray-100 p-6 rounded-xl sticky top-6">
-                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Project Details</h3>
-                        <ul class="space-y-4 text-gray-600">
+                    <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl sticky top-6">
+                        <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Project Details</h3>
+                        <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                             <li>
-                                <span class="block text-sm text-gray-500">Timeline</span>
-                                <span class="font-medium">12 weeks</span>
+                                <span class="block text-sm text-gray-500 dark:text-gray-400">Timeline</span>
+                                <span class="font-medium dark:text-white">12 weeks</span>
                             </li>
                             <li>
-                                <span class="block text-sm text-gray-500">Team</span>
-                                <span class="font-medium">Solo Designer/Developer</span>
+                                <span class="block text-sm text-gray-500 dark:text-gray-400">Team</span>
+                                <span class="font-medium dark:text-white">Solo Designer/Developer</span>
                             </li>
                             <li>
-                                <span class="block text-sm text-gray-500">Tools</span>
-                                <span class="font-medium">Figma, VS Code, Shopify</span>
+                                <span class="block text-sm text-gray-500 dark:text-gray-400">Tools</span>
+                                <span class="font-medium dark:text-white">Figma, VS Code, Shopify</span>
                             </li>
                             <li>
-                                <span class="block text-sm text-gray-500">Deliverables</span>
-                                <span class="font-medium">UI/UX Design, Front-end Development</span>
+                                <span class="block text-sm text-gray-500 dark:text-gray-400">Deliverables</span>
+                                <span class="font-medium dark:text-white">UI/UX Design, Front-end Development</span>
                             </li>
                             <li>
-                                <span class="block text-sm text-gray-500">Results</span>
-                                <span class="font-medium">35% increase in conversions</span>
+                                <span class="block text-sm text-gray-500 dark:text-gray-400">Results</span>
+                                <span class="font-medium dark:text-white">35% increase in conversions</span>
                             </li>
                         </ul>
                         <a href="https://ecomarket.example.com" target="_blank"
-                            class="mt-6 inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                            class="mt-6 inline-flex items-center gap-2 text-primary font-medium hover:underline dark:text-primary-300">
                             Visit Live Site
                             <i class="fi fi-rr-external-link text-sm"></i>
                         </a>
@@ -201,49 +221,53 @@
     </section>
 
     <!-- The Challenge -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-700 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="text-center mb-12">
-                <span class="inline-block bg-primary/10 text-primary text-sm px-4 py-1 rounded-full mb-4">Discovery
+                <span
+                    class="inline-block bg-primary/10 text-primary dark:text-primary-300 text-sm px-4 py-1 rounded-full mb-4">Discovery
                     Phase</span>
-                <h2 class="text-3xl font-semibold text-gray-700">The Challenge</h2>
+                <h2 class="text-3xl font-semibold text-gray-700 dark:text-white">The Challenge</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-4">User Pain Points</h3>
-                    <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">User Pain Points</h3>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <span class="text-lg font-bold">1</span>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Confusing Navigation</h4>
-                                    <p class="text-gray-600 text-sm">Users struggled to find products by sustainability
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Confusing Navigation</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Users struggled to find products
+                                        by sustainability
                                         criteria</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <span class="text-lg font-bold">2</span>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Lack of Trust Signals</h4>
-                                    <p class="text-gray-600 text-sm">No clear indicators of product sustainability
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Lack of Trust Signals</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">No clear indicators of product
+                                        sustainability
                                         credentials</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <span class="text-lg font-bold">3</span>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Cumbersome Checkout</h4>
-                                    <p class="text-gray-600 text-sm">5-step process with unnecessary fields led to
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Cumbersome Checkout</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">5-step process with unnecessary
+                                        fields led to
                                         abandonment</p>
                                 </div>
                             </li>
@@ -251,39 +275,42 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Business Goals</h3>
-                    <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Business Goals</h3>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <i class="fi fi-rr-chart-network"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Increase Conversions</h4>
-                                    <p class="text-gray-600 text-sm">Improve the checkout flow to boost completed
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Increase Conversions</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Improve the checkout flow to
+                                        boost completed
                                         purchases</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <i class="fi fi-rr-users"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Enhance Brand Perception</h4>
-                                    <p class="text-gray-600 text-sm">Better communicate sustainability values to
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Enhance Brand Perception</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Better communicate
+                                        sustainability values to
                                         eco-conscious shoppers</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    class="bg-primary/10 text-primary dark:text-primary-300 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                                     <i class="fi fi-rr-mobile"></i>
                                 </span>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Mobile Optimization</h4>
-                                    <p class="text-gray-600 text-sm">Over 60% of traffic came from mobile devices</p>
+                                    <h4 class="font-medium text-gray-700 dark:text-white">Mobile Optimization</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Over 60% of traffic came from
+                                        mobile devices</p>
                                 </div>
                             </li>
                         </ul>
@@ -294,18 +321,18 @@
     </section>
 
     <!-- Research & Discovery -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-800 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="text-center mb-12">
                 <span
-                    class="inline-block bg-primary/10 text-primary text-sm px-4 py-1 rounded-full mb-4">Research</span>
-                <h2 class="text-3xl font-semibold text-gray-700">Understanding the User</h2>
+                    class="inline-block bg-primary/10 text-primary dark:text-primary-300 text-sm px-4 py-1 rounded-full mb-4">Research</span>
+                <h2 class="text-3xl font-semibold text-gray-700 dark:text-white">Understanding the User</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-4">User Interviews</h3>
-                    <div class="prose text-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">User Interviews</h3>
+                    <div class="prose text-gray-600 dark:text-gray-300">
                         <p>
                             I conducted interviews with 15 existing and potential customers to understand their
                             shopping behaviors, pain points, and what they look for in sustainable products.
@@ -321,20 +348,20 @@
                         </ul>
                     </div>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-xl">
+                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
                         alt="User research session" class="w-full rounded-lg">
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div class="bg-gray-100 p-6 rounded-xl order-2 md:order-1">
+                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl order-2 md:order-1">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                         alt="Competitive analysis" class="w-full rounded-lg">
                 </div>
                 <div class="order-1 md:order-2">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Competitive Analysis</h3>
-                    <div class="prose text-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Competitive Analysis</h3>
+                    <div class="prose text-gray-600 dark:text-gray-300">
                         <p>
                             I analyzed 8 competing sustainable e-commerce platforms to identify industry
                             standards and opportunities for differentiation.
@@ -355,93 +382,101 @@
     </section>
 
     <!-- Design Process -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-700 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="text-center mb-12">
-                <span class="inline-block bg-primary/10 text-primary text-sm px-4 py-1 rounded-full mb-4">Design</span>
-                <h2 class="text-3xl font-semibold text-gray-700">Design Solutions</h2>
+                <span
+                    class="inline-block bg-primary/10 text-primary dark:text-primary-300 text-sm px-4 py-1 rounded-full mb-4">Design</span>
+                <h2 class="text-3xl font-semibold text-gray-700 dark:text-white">Design Solutions</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-6 rounded-xl">
-                    <div class="text-primary text-3xl mb-4">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
+                    <div class="text-primary dark:text-primary-300 text-3xl mb-4">
                         <i class="fi fi-rr-sitemap"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Information Architecture</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-3">Information Architecture</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
                         Restructured the navigation to prioritize sustainability categories while maintaining
                         traditional product browsing. Added filters for sustainability attributes.
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-xl">
-                    <div class="text-primary text-3xl mb-4">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
+                    <div class="text-primary dark:text-primary-300 text-3xl mb-4">
                         <i class="fi fi-rr-palette"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Visual Design</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-3">Visual Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
                         Created an earthy but vibrant color palette that stood out from competitors while
                         maintaining accessibility standards.
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-xl">
-                    <div class="text-primary text-3xl mb-4">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
+                    <div class="text-primary dark:text-primary-300 text-3xl mb-4">
                         <i class="fi fi-rr-mobile"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Mobile-First Approach</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-3">Mobile-First Approach</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
                         Designed all components mobile-first, with special attention to touch targets and
                         thumb-friendly navigation.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-xl mb-16">
-                <h3 class="text-xl font-semibold text-gray-700 mb-4">Key Screens</h3>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl mb-16">
+                <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Key Screens</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                            alt="Homepage design" class="w-full h-[375px] object-cover rounded-lg border border-gray-200">
-                        <h4 class="font-medium text-gray-700 mt-3">Homepage</h4>
-                        <p class="text-gray-600 text-sm">Highlighted sustainability mission with clear CTAs to shop by
+                            alt="Homepage design"
+                            class="w-full h-[375px] object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h4 class="font-medium text-gray-700 dark:text-white mt-3">Homepage</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Highlighted sustainability mission with
+                            clear CTAs to shop by
                             values</p>
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
-                            alt="Product page design" class="w-full h-[375px] object-cover rounded-lg border border-gray-200">
-                        <h4 class="font-medium text-gray-700 mt-3">Product Page</h4>
-                        <p class="text-gray-600 text-sm">Featured sustainability badges and detailed environmental
+                            alt="Product page design"
+                            class="w-full h-[375px] object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                        <h4 class="font-medium text-gray-700 dark:text-white mt-3">Product Page</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Featured sustainability badges and detailed
+                            environmental
                             impact information</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-xl">
-                <h3 class="text-xl font-semibold text-gray-700 mb-4">Checkout Redesign</h3>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Checkout Redesign</h3>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div>
-                        <div class="bg-gray-100 p-4 rounded-lg mb-3">
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-3">
                             <span
                                 class="inline-block bg-primary text-white rounded-full w-6 h-6 text-sm flex items-center justify-center">1</span>
                         </div>
-                        <h4 class="font-medium text-gray-700">Cart Review</h4>
-                        <p class="text-gray-600 text-sm">Clear item display with edit options and sustainability summary
+                        <h4 class="font-medium text-gray-700 dark:text-white">Cart Review</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Clear item display with edit options and
+                            sustainability summary
                         </p>
                     </div>
                     <div>
-                        <div class="bg-gray-100 p-4 rounded-lg mb-3">
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-3">
                             <span
                                 class="inline-block bg-primary text-white rounded-full w-6 h-6 text-sm flex items-center justify-center">2</span>
                         </div>
-                        <h4 class="font-medium text-gray-700">Shipping & Payment</h4>
-                        <p class="text-gray-600 text-sm">Combined into one step with progress indicator</p>
+                        <h4 class="font-medium text-gray-700 dark:text-white">Shipping & Payment</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Combined into one step with progress
+                            indicator</p>
                     </div>
                     <div>
-                        <div class="bg-gray-100 p-4 rounded-lg mb-3">
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-3">
                             <span
                                 class="inline-block bg-primary text-white rounded-full w-6 h-6 text-sm flex items-center justify-center">3</span>
                         </div>
-                        <h4 class="font-medium text-gray-700">Confirmation</h4>
-                        <p class="text-gray-600 text-sm">Order summary with sustainability impact and sharing options
+                        <h4 class="font-medium text-gray-700 dark:text-white">Confirmation</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Order summary with sustainability impact and
+                            sharing options
                         </p>
                     </div>
                 </div>
@@ -496,9 +531,9 @@
     </section>
 
     <!-- Project Gallery -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-800 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">Project Gallery</h2>
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-white mb-8 text-center">Project Gallery</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a href="#" class="group relative block overflow-hidden rounded-xl">
@@ -560,12 +595,12 @@
     </section>
 
     <!-- Next Project -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-700 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="text-center">
-                <h2 class="text-3xl font-semibold text-gray-700 mb-6">View Another Project</h2>
+                <h2 class="text-3xl font-semibold text-gray-700 dark:text-white mb-6">View Another Project</h2>
                 <a href="/projects/bean-grounds"
-                    class="inline-flex items-center gap-2 text-primary font-medium hover:underline text-lg">
+                    class="inline-flex items-center gap-2 text-primary font-medium hover:underline text-lg dark:text-primary-300">
                     Bean Grounds Coffee Branding
                     <i class="fi fi-rr-arrow-small-right inline-block translate-y-1"></i>
                 </a>
@@ -574,13 +609,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-500">
+    <footer class="bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Certifications -->
-            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 py-6">
-                <p class="text-sm text-gray-600">© <span id="copyright"></span> The Creative House</p>
-                <p class="text-sm text-gray-600">Designed by <a target="_blank" href="https://www.klevadev.com"
-                        class="text-primary">Clever Designer</a></p>
+            <div
+                class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 dark:border-gray-600 py-6">
+                <p class="text-sm">© <span id="copyright"></span> The Creative House</p>
+                <p class="text-sm">Designed by <a target="_blank" href="https://www.klevadev.com"
+                        class="text-primary dark:text-primary-300">Clever Designer</a></p>
             </div>
         </div>
     </footer>
@@ -615,6 +651,43 @@
                 // Lightbox implementation would go here
                 console.log('Open lightbox for:', this.href);
             });
+        });
+    </script>
+
+    <!-- Dark mode toggle (optional - add this if you want a toggle button) -->
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+
+        // Initialize theme based on localStorage or OS preference
+        const userPref = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userPref === 'true' || (userPref === null && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        } else {
+            document.documentElement.classList.remove('dark');
+            if (moonIcon && sunIcon) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        // Toggle function
+        toggleButton?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
+            }
         });
     </script>
 

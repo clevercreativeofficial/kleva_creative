@@ -32,6 +32,7 @@
     <!-- Custom style -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -44,10 +45,10 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-900">
 
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
             <div class="animate-bounce">
                 <img class="w-16 animate-pulse" src="assets/images/logo.svg" alt="">
@@ -59,9 +60,26 @@
         class="overlay md:translate-x-full translate-x-[750px] duration-300 bg-gray-900 bg-opacity-75 fixed top-0 left-0 w-full h-screen z-50">
     </div>
 
+    <!-- theme toggler -->
+    <div class="fixed md:bottom-20 bottom-10 right-0 w-full z-[100]">
+        <div class="max-w-[1200px] m-auto md:px-10 px-3 flex justify-end items-center">
+            <div id="themeToggle"
+                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+
+                <span class="sun">
+                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
+                </span>
+                <span class="moon hidden">
+                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
     <!-- navbar -->
     <nav
-        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 border-b border-gray-100 z-50">
+        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 dark:bg-gray-800 dark:bg-opacity-75 border-b border-gray-100 dark:border-gray-700 z-50">
         <!-- container -->
         <div class="max-w-[1200px] m-auto px-3 flex justify-between items-center">
             <div class="w-10 py-4">
@@ -71,19 +89,19 @@
             </div>
 
             <ul id="navItems"
-                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
+                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white dark:bg-gray-800 md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 dark:text-gray-300 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
                 <div class="md:hidden block w-32 pb-4">
                     <a href="/">
                         <img src="/assets/images/logo/logo_color.svg" alt="logo">
                     </a>
                 </div>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
-                <li><a class="hover:text-primary text-primary duration-300 ease-in-out" href="/secteurs">Projects</a>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary text-primary duration-300 ease-in-out" href="/secteurs">Projects</a>
                 </li>
                 <a href="/contact"
-                    class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white">
+                    class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white dark:text-gray-100">
                     <i class="fi fi-rr-envelope translate-y-0.5 inline-block"></i>
                     Contact
                 </a>
@@ -98,15 +116,15 @@
 
     <!-- Projects Hero Section -->
     <section class="max-w-[1200px] m-auto my-4 px-3">
-        <div class="w-full bg-white py-10 lg:px-10 px-3 rounded-xl">
+        <div class="w-full bg-white dark:bg-gray-800 py-10 lg:px-10 px-3 rounded-xl">
             <div class="text-center">
                 <h2 class="text-primary lg:text-[2.5rem] text-[2rem] font-semibold">
                     My Projects
                 </h2>
-                <h4 class="text-gray-600 text-xl lg:mt-2 mt-0 mb-4">
+                <h4 class="text-gray-600 dark:text-gray-300 text-xl lg:mt-2 mt-0 mb-4">
                     A showcase of my design and development work
                 </h4>
-                <p class="max-w-[926px] text-base text-gray-600 mx-auto">
+                <p class="max-w-[926px] text-base text-gray-600 dark:text-gray-400 mx-auto">
                     Explore my portfolio of creative projects. Each case study demonstrates my approach to solving
                     design
                     challenges and delivering effective digital solutions for clients across various industries.
@@ -116,29 +134,29 @@
     </section>
 
     <!-- Projects Filter -->
-    <section class="bg-gray-100 py-8">
+    <section class="bg-gray-100 dark:bg-gray-900 py-8">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="flex flex-wrap justify-center gap-2">
                 <button class="filter-btn active px-4 py-2 rounded-full bg-primary text-white" data-filter="all">
                     All Projects
                 </button>
                 <button
-                    class="filter-btn px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="filter-btn px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
                     data-filter="web">
                     Web Design
                 </button>
                 <button
-                    class="filter-btn px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="filter-btn px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
                     data-filter="branding">
                     Branding
                 </button>
                 <button
-                    class="filter-btn px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="filter-btn px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
                     data-filter="ui">
                     UI/UX
                 </button>
                 <button
-                    class="filter-btn px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="filter-btn px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
                     data-filter="graphic">
                     Graphic Design
                 </button>
@@ -147,24 +165,24 @@
     </section>
 
     <!-- Projects Grid -->
-    <section class="bsg-white py-6">
+    <section class="bsg-white dark:bg-gray-900 py-6">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="web">
                     <a href="/projects/eco-market"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                                 alt="Eco Market Website"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             Web Design
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 15th March 2023
@@ -181,18 +199,18 @@
                 <!-- Project 2 -->
                 <div class="project-card" data-category="branding">
                     <a href="/projects/bean-grounds"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
                                 alt="Bean Grounds Branding"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             Branding
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 2nd February 2023
@@ -208,18 +226,18 @@
                 <!-- Project 3 -->
                 <div class="project-card" data-category="ui">
                     <a href="/projects/fit-track"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                                 alt="Fit Track App"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             UI/UX Design
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 10th January 2023
@@ -236,18 +254,18 @@
                 <!-- Project 4 -->
                 <div class="project-card" data-category="graphic">
                     <a href="/projects/urban-poster"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
                                 alt="Urban Culture Poster Series"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             Graphic Design
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 5th December 2022
@@ -263,18 +281,18 @@
                 <!-- Project 5 -->
                 <div class="project-card" data-category="web">
                     <a href="/projects/tech-solutions"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
                                 alt="Tech Solutions Website"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             Web Design
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 20th November 2022
@@ -290,18 +308,18 @@
                 <!-- Project 6 -->
                 <div class="project-card" data-category="ui">
                     <a href="/projects/food-delivery"
-                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+                        class="group relative block overflow-hidden rounded-2xl hover:shadow-xl dark:hover:shadow-gray-800/50 transition-shadow">
                         <div class="h-[300px] overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
                                 alt="Food Delivery App"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div
-                            class="absolute top-6 left-6 bg-gray-950/20 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
+                            class="absolute top-6 left-6 bg-gray-950/20 dark:bg-gray-800/80 opacity-0 group-hover:opacity-100 duration-300 rounded-full text-white text-sm px-4 py-1">
                             UI/UX Design
                         </div>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent flex flex-col justify-end p-6">
+                            class="absolute inset-0 bg-gradient-to-t from-gray-950/90 dark:from-gray-900/90 to-transparent flex flex-col justify-end p-6">
                             <div class="flex items-center text-gray-300 text-sm">
                                 <i class="fi fi-rr-clock inline-block ml-2 translate-y-0.5 -translate-x-2"></i>
                                 8th October 2022
@@ -317,17 +335,17 @@
 
             <!-- Pagination -->
             <div class="mt-16 flex justify-center">
-                <nav class="text-gray-600 flex items-center gap-1">
+                <nav class="text-gray-600 dark:text-gray-400 flex items-center gap-1">
                     <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-primary text-white">
                         1
                     </a>
-                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white hover:bg-gray-200">
+                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
                         2
                     </a>
-                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white hover:bg-gray-200">
+                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
                         3
                     </a>
-                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white hover:bg-gray-200">
+                    <a href="#" class="h-8 w-8 flex justify-center items-center rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
                         <i class="fi fi-rr-angle-small-right inline-block translate-y-0.5"></i>
                     </a>
                 </nav>
@@ -336,28 +354,28 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">Client Testimonials</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Client Testimonials</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 What my clients say about working with me on these projects.
             </p>
 
             <div id="carousel" class="carousel mx-[-8px]"> <!-- compensate px-2 -->
                 <div class="px-2">
                     <!-- Testimonial 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
                                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
                                     class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-700">Sarah Johnson</h4>
-                                <p class="text-sm text-gray-500">Marketing Director, TechCorp</p>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Marketing Director, TechCorp</p>
                             </div>
                         </div>
-                        <div class="text-gray-600 mb-4">
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
                             <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
                             <p class="mt-2">Working with Clever was an absolute pleasure. Their design skills
                                 transformed
@@ -375,18 +393,18 @@
                 </div>
                 <div class="px-2">
                     <!-- Testimonial 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
                                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
                                     class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-700">Michael Chen</h4>
-                                <p class="text-sm text-gray-500">CEO, Startup Ventures</p>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Michael Chen</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Startup Ventures</p>
                             </div>
                         </div>
-                        <div class="text-gray-600 mb-4">
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
                             <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
                             <p class="mt-2">Clever's attention to detail and creative approach helped us stand out in a
                                 crowded market. The UI/UX work was exceptional and our users love the new interface.</p>
@@ -402,18 +420,18 @@
                 </div>
                 <div class="px-2">
                     <!-- Testimonial 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
                                 <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez"
                                     class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-700">Emma Rodriguez</h4>
-                                <p class="text-sm text-gray-500">Creative Director, BrandWorks</p>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Emma Rodriguez</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Creative Director, BrandWorks</p>
                             </div>
                         </div>
-                        <div class="text-gray-600 mb-4">
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
                             <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
                             <p class="mt-2">We've worked with many designers, but Clever truly understands how to
                                 balance
@@ -430,18 +448,18 @@
                 </div>
                 <div class="px-2">
                     <!-- Testimonial 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
                                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
                                     class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-700">Michael Chen</h4>
-                                <p class="text-sm text-gray-500">CEO, Startup Ventures</p>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Michael Chen</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Startup Ventures</p>
                             </div>
                         </div>
-                        <div class="text-gray-600 mb-4">
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
                             <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
                             <p class="mt-2">Clever's attention to detail and creative approach helped us stand out in a
                                 crowded market. The UI/UX work was exceptional and our users love the new interface.</p>
@@ -460,12 +478,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-500">
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Certifications -->
-            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 py-6">
-                <p class="text-sm text-gray-600">© <span id="copyright"></span> The Creative House</p>
-                <p class="text-sm text-gray-600">Designed by <a target="_blank" href="https://www.klevadev.com"
+            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 dark:border-gray-800 py-6">
+                <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="copyright"></span> The Creative House</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Designed by <a target="_blank" href="https://www.klevadev.com"
                         class="text-primary">Clever Designer</a></p>
             </div>
         </div>
@@ -511,8 +529,6 @@
         });
     </script>
 
-
-
     <!-- loader -->
     <script type="text/javascript">
         $(window).on('load', function () {
@@ -536,11 +552,11 @@
                 button.addEventListener('click', function () {
                     // Remove active class from all buttons
                     filterButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
-                    filterButtons.forEach(btn => btn.classList.add('bg-white', 'text-gray-700'));
+                    filterButtons.forEach(btn => btn.classList.add('bg-white', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300'));
 
                     // Add active class to clicked button
                     this.classList.add('active', 'bg-primary', 'text-white');
-                    this.classList.remove('bg-white', 'text-gray-700');
+                    this.classList.remove('bg-white', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
 
                     const filterValue = this.getAttribute('data-filter');
 
@@ -553,6 +569,43 @@
                     });
                 });
             });
+        });
+    </script>
+
+    <!-- Dark mode toggle (optional - add this if you want a toggle button) -->
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+
+        // Initialize theme based on localStorage or OS preference
+        const userPref = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userPref === 'true' || (userPref === null && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        } else {
+            document.documentElement.classList.remove('dark');
+            if (moonIcon && sunIcon) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        // Toggle function
+        toggleButton?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
+            }
         });
     </script>
 

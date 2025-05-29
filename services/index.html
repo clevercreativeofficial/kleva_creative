@@ -32,6 +32,7 @@
     <!-- Custom style -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -44,10 +45,10 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-900">
 
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
             <div class="animate-bounce">
                 <img class="w-16 animate-pulse" src="assets/images/logo.svg" alt="">
@@ -59,9 +60,26 @@
         class="overlay md:translate-x-full translate-x-[750px] duration-300 bg-gray-900 bg-opacity-75 fixed top-0 left-0 w-full h-screen z-50">
     </div>
 
+    <!-- theme toggler -->
+    <div class="fixed md:bottom-20 bottom-10 right-0 w-full z-[100]">
+        <div class="max-w-[1200px] m-auto md:px-10 px-3 flex justify-end items-center">
+            <div id="themeToggle"
+                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+
+                <span class="sun">
+                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
+                </span>
+                <span class="moon hidden">
+                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
     <!-- navbar -->
     <nav
-        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 border-b border-gray-100 z-50">
+        class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 dark:bg-gray-800 dark:bg-opacity-75 border-b border-gray-100 dark:border-gray-700 z-50">
         <!-- container -->
         <div class="max-w-[1200px] m-auto px-3 flex justify-between items-center">
             <div class="w-10 py-4">
@@ -71,19 +89,19 @@
             </div>
 
             <ul id="navItems"
-                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
+                class="md:relative fixed top-0 left-0 md:bg-transparent bg-white dark:bg-gray-800 md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 dark:text-gray-300 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
                 <div class="md:hidden block w-32 pb-4">
                     <a href="/">
                         <img src="/assets/images/logo/logo_color.svg" alt="logo">
                     </a>
                 </div>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
-                <li><a class="hover:text-primary text-primary duration-300 ease-in-out" href="/services">Services</a>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/about">About</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary text-primary duration-300 ease-in-out" href="/services">Services</a>
                 </li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/secteurs">Projects</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/projects">Projects</a></li>
                 <a href="/contact"
-                    class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white">
+                    class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white dark:text-gray-100">
                     <i class="fi fi-rr-envelope translate-y-0.5 inline-block"></i>
                     Contact
                 </a>
@@ -98,15 +116,15 @@
 
     <!-- Services Hero Section -->
     <section class="max-w-[1200px] m-auto my-4 px-3">
-        <div class="w-full bg-white py-10 lg:px-10 px-3 rounded-xl">
+        <div class="w-full bg-white dark:bg-gray-800 py-10 lg:px-10 px-3 rounded-xl">
             <div class="text-center">
                 <h2 class="text-primary lg:text-[2.5rem] text-[2rem] font-semibold">
                     My Services
                 </h2>
-                <h4 class="text-gray-600 text-xl lg:mt-2 mt-0 mb-4">
+                <h4 class="text-gray-600 dark:text-gray-300 text-xl lg:mt-2 mt-0 mb-4">
                     Comprehensive design and development solutions
                 </h4>
-                <p class="max-w-[926px] text-base text-gray-600 mx-auto">
+                <p class="max-w-[926px] text-base text-gray-600 dark:text-gray-400 mx-auto">
                     I offer a range of professional services to help businesses establish and enhance their digital
                     presence.
                     From initial concept to final implementation, I work closely with clients to deliver solutions that
@@ -117,20 +135,20 @@
     </section>
 
     <!-- Main Services Section -->
-    <section class="bg-gray-100 py-10">
+    <section class="bg-gray-100 dark:bg-gray-900 py-10">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-laptop"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">UI/UX Design</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Create intuitive and visually appealing interfaces that enhance user experience and drive
                         engagement.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             User research & persona development
@@ -151,15 +169,15 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-globe"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Web Development</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Build responsive, fast, and secure websites that work seamlessly across all devices.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             Custom website development
@@ -180,16 +198,16 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-palette"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Brand Identity</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Develop a cohesive brand identity that communicates your values and differentiates you in the
                         market.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             Logo design
@@ -210,15 +228,15 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-mobile"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Mobile Design</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Design mobile interfaces that provide exceptional user experiences on smaller screens.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             Mobile app UI/UX design
@@ -239,15 +257,15 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-chart-pie-alt"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Digital Marketing</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Enhance your online presence with strategic digital marketing solutions.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             Social media graphics
@@ -268,15 +286,15 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-xl hover:border-gray-200 border-transparent border transition-shadow">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover:border-gray-200 dark:hover:border-gray-700 border-transparent border transition-shadow">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-pencil-paintbrush"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Graphic Design</h3>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Create compelling visual content that communicates your message effectively.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm">
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fi fi-rr-check text-primary translate-y-0.5"></i>
                             Print design (brochures, flyers)
@@ -300,10 +318,10 @@
     </section>
 
     <!-- Process Section -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">My Working Process</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">My Working Process</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 A structured approach to ensure quality and efficiency in every project.
             </p>
 
@@ -314,7 +332,7 @@
                         <span class="text-primary text-xl font-bold">1</span>
                     </div>
                     <h3 class="text-lg text-primary font-medium mb-2">Discovery</h3>
-                    <p class="text-sm text-gray-600">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
                         Understanding your goals, audience, and requirements through research and consultation.
                     </p>
                 </div>
@@ -325,7 +343,7 @@
                         <span class="text-primary text-xl font-bold">2</span>
                     </div>
                     <h3 class="text-lg text-primary font-medium mb-2">Concept</h3>
-                    <p class="text-sm text-gray-600">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
                         Developing initial concepts and wireframes to visualize the direction.
                     </p>
                 </div>
@@ -336,7 +354,7 @@
                         <span class="text-primary text-xl font-bold">3</span>
                     </div>
                     <h3 class="text-lg text-primary font-medium mb-2">Design</h3>
-                    <p class="text-sm text-gray-600">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
                         Creating high-fidelity designs and prototypes for review and feedback.
                     </p>
                 </div>
@@ -347,7 +365,7 @@
                         <span class="text-primary text-xl font-bold">4</span>
                     </div>
                     <h3 class="text-lg text-primary font-medium mb-2">Delivery</h3>
-                    <p class="text-sm text-gray-600">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
                         Finalizing and implementing the approved solution with thorough testing.
                     </p>
                 </div>
@@ -356,10 +374,10 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="hidden bg-gray-100 py-16">
+    <section class="hidden bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">Pricing Options</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Pricing Options</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 Flexible pricing models to suit different project needs and budgets.
             </p>
 
@@ -367,7 +385,7 @@
             id="sticky-tabs" class='md:relative sticky top-[34px] md:max-w-full max-w-[1200px] m-auto md:mb-10 mb-0 py-5 md:px-3 px-0 z-10'>
             <div className="flex justify-center">
                 <ul 
-                    className='md:w-fit h-10 bg-white flex items-center justify-center gap-4 rounded-lg z-10 overflow-hidden'>
+                    className='md:w-fit h-10 bg-white dark:bg-gray-800 flex items-center justify-center gap-4 rounded-lg z-10 overflow-hidden'>
                     
                         <li
                             className='py-2 px-4 text-[14px] h-full cursor-pointer'>
@@ -390,42 +408,42 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Package 1 -->
-                <div class="relative h-auto bg-white shadow-gray-200 py-20 px-10 rounded-xl overflow-hidden">
+                <div class="relative h-auto bg-white dark:bg-gray-800 shadow-gray-200 dark:shadow-gray-800/50 py-20 px-10 rounded-xl overflow-hidden">
                     <div
-                        class="absolute top-8 -right-10 w-44 bg-gray-600 text-center text-gray-200 text-[1.2rem] font-semibold rotate-45">
+                        class="absolute top-8 -right-10 w-44 bg-gray-600 dark:bg-gray-700 text-center text-gray-200 text-[1.2rem] font-semibold rotate-45">
                         Basic
                     </div>
-                    <h2 class='text-gray-600 text-[1.5rem] font-bold'>$299</h2>
-                    <p class='max-w-[350px] text-gray-600 text-[14px] my-3'>Ideal for individuals who need
+                    <h2 class='text-gray-600 dark:text-gray-300 text-[1.5rem] font-bold'>$299</h2>
+                    <p class='max-w-[350px] text-gray-600 dark:text-gray-400 text-[14px] my-3'>Ideal for individuals who need
                         quick access to basic features.</p>
 
                     <a href="/contact"
-                        class="block text-center w-full py-2 text-white rounded-lg bg-gray-600 hover:bg-primary hover:text-white transition-colors">
+                        class="block text-center w-full py-2 text-white rounded-lg bg-gray-600 dark:bg-gray-700 hover:bg-primary hover:text-white transition-colors">
                         Get Started
                     </a>
 
                     <ul class="w-full flex flex-col gap-3 mt-4">
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Basic Website Design
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Up to 5 Pages
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Limited Revisions
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Standard SEO Optimization
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             1 Custom Graphic Design
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Delivery: 2 weeks
                         </li>
@@ -434,7 +452,7 @@
                 </div>
 
                 <!-- Package 2 (Featured) -->
-                <div class="relative h-auto bg-gray-600 shadow-gray-200 py-20 px-10 rounded-xl overflow-hidden">
+                <div class="relative h-auto bg-gray-600 dark:bg-gray-700 shadow-gray-200 dark:shadow-gray-800/50 py-20 px-10 rounded-xl overflow-hidden">
                     <div
                         class="absolute top-8 -right-10 w-44 bg-primary text-center text-gray-200 text-[1.2rem] font-semibold rotate-45">
                         Standard
@@ -478,42 +496,42 @@
                 </div>
 
                 <!-- Package 3 -->
-                <div class="relative h-auto bg-white shadow-gray-200 py-20 px-10 rounded-xl overflow-hidden">
+                <div class="relative h-auto bg-white dark:bg-gray-800 shadow-gray-200 dark:shadow-gray-800/50 py-20 px-10 rounded-xl overflow-hidden">
                     <div
-                        class="absolute top-8 -right-10 w-44 bg-gray-600 text-center text-gray-200 text-[1.2rem] font-semibold rotate-45">
+                        class="absolute top-8 -right-10 w-44 bg-gray-600 dark:bg-gray-700 text-center text-gray-200 text-[1.2rem] font-semibold rotate-45">
                         Premium
                     </div>
-                    <h2 class='text-gray-600 text-[1.5rem] font-bold'>Custom</h2>
-                    <p class='max-w-[350px] text-gray-600 text-[14px] my-3'>Ideal for individuals who need
+                    <h2 class='text-gray-600 dark:text-gray-300 text-[1.5rem] font-bold'>Custom</h2>
+                    <p class='max-w-[350px] text-gray-600 dark:text-gray-400 text-[14px] my-3'>Ideal for individuals who need
                         quick access to basic features.</p>
 
                     <a href="/contact"
-                        class="block text-center w-full py-2 text-white rounded-lg bg-gray-600 hover:bg-primary hover:text-white transition-colors">
+                        class="block text-center w-full py-2 text-white rounded-lg bg-gray-600 dark:bg-gray-700 hover:bg-primary hover:text-white transition-colors">
                         Get Started
                     </a>
 
                     <ul class="w-full flex flex-col gap-3 mt-4">
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Premium Design
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Custom Features Development
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Unlimited Revisions
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Complete Branding Package
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Priority Support
                         </li>
-                        <li class='text-gray-600 text-[14px] flex items-center gap-1'>
+                        <li class='text-gray-600 dark:text-gray-400 text-[14px] flex items-center gap-1'>
                             <i class="fi fi-rr-check-circle translate-y-0.5"></i>
                             Delivery: 2 - 3 months
                         </li>
@@ -523,7 +541,7 @@
             </div>
 
             <div class="mt-10 text-center">
-                <p class="text-gray-600 mb-4">
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
                     Don't see what you're looking for? I also offer custom solutions and hourly rates.
                 </p>
                 <a href="/contact" class="inline-block text-primary font-medium hover:underline">
@@ -536,74 +554,74 @@
     <!-- FAQ Section -->
     <section class="py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">Frequently Asked Questions</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Frequently Asked Questions</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 Common questions about my services and working process.
             </p>
 
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-medium">What's included in your design services?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">My design services include research, concept development,
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">My design services include research, concept development,
                             high-fidelity designs, and revisions based on your feedback. The exact deliverables depend
                             on the specific project and package you choose.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-medium">How long does a typical project take?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">Project timelines vary based on scope and complexity. A
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">Project timelines vary based on scope and complexity. A
                             basic website might take 2-3 weeks, while a comprehensive branding project could take 4-6
                             weeks. I'll provide a detailed timeline after our initial consultation.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-medium">Do you offer ongoing support after project
                             completion?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">Yes, all packages include some level of post-launch
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">Yes, all packages include some level of post-launch
                             support. I also offer monthly retainer agreements for clients who need ongoing design and
                             development work.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-medium">What's your payment structure?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">I typically require a 50% deposit to begin work, with the
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">I typically require a 50% deposit to begin work, with the
                             remaining 50% due upon project completion. For larger projects, we can arrange milestone
                             payments.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-medium">Can you work with my existing brand guidelines?
                         </h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">Absolutely! If you have existing brand guidelines, I'll
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">Absolutely! If you have existing brand guidelines, I'll
                             ensure all designs adhere to your established visual identity while still bringing fresh
                             creativity to your project.</p>
                     </div>
@@ -613,12 +631,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-500">
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Certifications -->
-            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 py-6">
-                <p class="text-sm text-gray-600">© <span id="copyright"></span> The Creative House</p>
-                <p class="text-sm text-gray-600">Designed by <a target="_blank" href="https://www.klevadev.com"
+            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 dark:border-gray-800 py-6">
+                <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="copyright"></span> The Creative House</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Designed by <a target="_blank" href="https://www.klevadev.com"
                         class="text-primary">Clever Designer</a></p>
             </div>
         </div>
@@ -678,7 +696,7 @@
 
     <!-- faq -->
     <script>
-        const faqTitle = document.querySelectorAll('.bg-white button')
+        const faqTitle = document.querySelectorAll('.bg-white button, .dark\\:bg-gray-800 button')
         faqTitle.forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -700,6 +718,44 @@
             });
         });
     </script>
+
+    <!-- Dark mode toggle (optional - add this if you want a toggle button) -->
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+
+        // Initialize theme based on localStorage or OS preference
+        const userPref = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userPref === 'true' || (userPref === null && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        } else {
+            document.documentElement.classList.remove('dark');
+            if (moonIcon && sunIcon) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        // Toggle function
+        toggleButton?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
+            }
+        });
+    </script>
+
 
 </body>
 

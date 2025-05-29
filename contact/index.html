@@ -28,6 +28,7 @@
     <!-- Custom style -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -40,10 +41,10 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-900">
 
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
             <div class="animate-bounce">
                 <img class="w-16 animate-pulse" src="assets/images/logo.svg" alt="">
@@ -54,8 +55,25 @@
     <div class="overlay md:translate-x-full translate-x-[750px] duration-300 bg-gray-900 bg-opacity-75 fixed top-0 left-0 w-full h-screen z-50">
     </div>
 
+    <!-- theme toggler -->
+    <div class="fixed md:bottom-20 bottom-10 right-0 w-full z-[100]">
+        <div class="max-w-[1200px] m-auto md:px-10 px-3 flex justify-end items-center">
+            <div id="themeToggle"
+                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+
+                <span class="sun">
+                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
+                </span>
+                <span class="moon hidden">
+                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
     <!-- navbar -->
-    <nav class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 border-b border-gray-100 z-50">
+    <nav class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 dark:bg-gray-800 dark:bg-opacity-75 border-b border-gray-100 dark:border-gray-700 z-50">
         <!-- container -->
         <div class="max-w-[1200px] m-auto px-3 flex justify-between items-center">
             <div class="w-10 py-4">
@@ -64,17 +82,17 @@
                 </a>
             </div>
 
-            <ul id="navItems" class="md:relative fixed top-0 left-0 md:bg-transparent bg-white md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
+            <ul id="navItems" class="md:relative fixed top-0 left-0 md:bg-transparent bg-white dark:bg-gray-800 md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 dark:text-gray-300 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
                 <div class="md:hidden block w-32 pb-4">
                     <a href="/">
                         <img src="/assets/images/logo/logo_color.svg" alt="logo">
                     </a>
                 </div>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/secteurs">Projects</a></li>
-                <a href="/contact" class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white">
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/secteurs">Projects</a></li>
+                <a href="/contact" class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white dark:text-gray-100">
                     <i class="fi fi-rr-envelope translate-y-0.5 inline-block"></i>
                     Contact
                 </a>
@@ -88,15 +106,15 @@
 
     <!-- Contact Hero Section -->
     <section class="max-w-[1200px] m-auto my-4 px-3">
-        <div class="w-full bg-white py-10 lg:px-10 px-3 rounded-xl">
+        <div class="w-full bg-white dark:bg-gray-800 py-10 lg:px-10 px-3 rounded-xl">
             <div class="text-center">
                 <h2 class="text-primary lg:text-[2.5rem] text-[2rem] font-semibold">
                     Get In Touch
                 </h2>
-                <h4 class="text-gray-600 text-xl lg:mt-2 mt-0 mb-4">
+                <h4 class="text-gray-600 dark:text-gray-300 text-xl lg:mt-2 mt-0 mb-4">
                     Let's discuss your project
                 </h4>
-                <p class="max-w-[926px] text-base text-gray-600 mx-auto">
+                <p class="max-w-[926px] text-base text-gray-600 dark:text-gray-400 mx-auto">
                     Have a project in mind or want to discuss potential collaboration? Fill out the form below or 
                     contact me directly. I typically respond within 24-48 hours.
                 </p>
@@ -105,43 +123,43 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="bg-gray-100 py-6">
+    <section class="bg-gray-100 dark:bg-gray-900 py-6">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="grid lg:grid-cols-2 gap-10">
                 <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-xl">
-                    <h3 class="text-2xl font-semibold text-gray-700 mb-6">Send Me a Message</h3>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">Send Me a Message</h3>
                     
                     <form id="contactForm" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
                                 <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:bg-transparent outline-none focus:ring-primary focus:border-primary">
+                                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:bg-transparent dark:focus:bg-gray-600 outline-none focus:ring-primary focus:border-primary">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
                                 <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:bg-transparent outline-none focus:ring-primary focus:border-primary">
+                                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:bg-transparent dark:focus:bg-gray-600 outline-none focus:ring-primary focus:border-primary">
                             </div>
                         </div>
                         
                         <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
                             <input type="text" id="subject" name="subject" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:bg-transparent outline-none focus:ring-primary focus:border-primary">
+                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:bg-transparent dark:focus:bg-gray-600 outline-none focus:ring-primary focus:border-primary">
                         </div>
                         
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
                             <textarea id="message" name="message" rows="5" required
-                                class="w-full px-4 py-2 min-h-20 max-h-48 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:bg-transparent outline-none focus:ring-primary focus:border-primary"></textarea>
+                                class="w-full px-4 py-2 min-h-20 max-h-48 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:bg-transparent dark:focus:bg-gray-600 outline-none focus:ring-primary focus:border-primary"></textarea>
                         </div>
                         
                         <div class="flex">
                             <input type="checkbox" id="consent" name="consent" required
-                                class="w-4 h-4 text-primary accent-primary mt-0.5 border-gray-300 rounded focus:ring-primary">
-                            <label for="consent" class="ml-2 block text-sm text-gray-700">
+                                class="w-4 h-4 text-primary accent-primary mt-0.5 border-gray-300 dark:border-gray-600 rounded focus:ring-primary">
+                            <label for="consent" class="ml-2 block text-sm text-gray-700 dark:text-gray-400">
                                 I consent to having my data collected and stored according to the <br> <a href="/privacy" class="text-primary hover:underline">Privacy Policy</a>
                             </label>
                         </div>
@@ -156,8 +174,8 @@
 
                 <!-- Contact Info -->
                 <div class="space-y-8">
-                    <div class="bg-white p-8 rounded-xl">
-                        <h3 class="text-2xl font-semibold text-gray-700 mb-6">Contact Information</h3>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">Contact Information</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
@@ -165,8 +183,8 @@
                                     <i class="fi fi-rr-envelope"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Email</h4>
-                                    <a href="mailto:hello@clevercreative.com" class="text-gray-600 hover:text-primary hover:underline">
+                                    <h4 class="font-medium text-gray-700 dark:text-gray-300">Email</h4>
+                                    <a href="mailto:hello@clevercreative.com" class="text-gray-600 dark:text-gray-400 hover:text-primary hover:underline">
                                         hello@clevercreative.com
                                     </a>
                                 </div>
@@ -177,8 +195,8 @@
                                     <i class="fi fi-rr-phone-call"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Phone</h4>
-                                    <a href="tel:+1234567890" class="text-gray-600 hover:text-primary hover:underline">
+                                    <h4 class="font-medium text-gray-700 dark:text-gray-300">Phone</h4>
+                                    <a href="tel:+1234567890" class="text-gray-600 dark:text-gray-400 hover:text-primary hover:underline">
                                         +1 (234) 567-890
                                     </a>
                                 </div>
@@ -189,8 +207,8 @@
                                     <i class="fi fi-rr-map-marker"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Location</h4>
-                                    <p class="text-gray-600">
+                                    <h4 class="font-medium text-gray-700 dark:text-gray-300">Location</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
                                         123 Design Street<br>
                                         Creative City, CA 90210<br>
                                         United States
@@ -203,8 +221,8 @@
                                     <i class="fi fi-rr-clock"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Working Hours</h4>
-                                    <p class="text-gray-600">
+                                    <h4 class="font-medium text-gray-700 dark:text-gray-300">Working Hours</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
                                         Monday - Friday: 9am - 5pm<br>
                                         Weekends: By appointment
                                     </p>
@@ -214,16 +232,16 @@
                     </div>
                     
                     <!-- Social Media -->
-                    <div class="bg-white p-8 rounded-xl">
-                        <h3 class="text-2xl font-semibold text-gray-700 mb-6">Follow Me</h3>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">Follow Me</h3>
                         <div class="flex flex-wrap gap-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors">
                                 <i class="fi fi-brands-dribbble inline-block translate-y-0.5 text-lg"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors">
                                 <i class="fi fi-brands-behance inline-block translate-y-0.5 text-lg"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors">
                                 <i class="fi fi-brands-github inline-block translate-y-0.5 text-lg"></i>
                             </a>
                         </div>
@@ -234,55 +252,55 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">Common Questions</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Common Questions</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 Quick answers to some frequently asked questions about working with me.
             </p>
 
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-semibold">How soon can you start on my project?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">My availability varies, but I typically can begin new projects within 1-2 weeks of our initial discussion. For urgent projects, please mention your timeline in your message, and I'll do my best to accommodate.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">My availability varies, but I typically can begin new projects within 1-2 weeks of our initial discussion. For urgent projects, please mention your timeline in your message, and I'll do my best to accommodate.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-semibold">What information should I include in my project inquiry?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">Please include as much detail as possible about your project goals, target audience, budget range, timeline, and any specific requirements or preferences you may have. The more information you provide, the better I can assess how to help.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">Please include as much detail as possible about your project goals, target audience, budget range, timeline, and any specific requirements or preferences you may have. The more information you provide, the better I can assess how to help.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-semibold">Do you work with international clients?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">Yes, I regularly work with clients from around the world. All communication can be conducted remotely, and I'm happy to accommodate different time zones when scheduling calls or meetings.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">Yes, I regularly work with clients from around the world. All communication can be conducted remotely, and I'm happy to accommodate different time zones when scheduling calls or meetings.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="bg-white px-6 py-4 rounded-xl">
-                    <button class="w-full text-left flex justify-between text-gray-700 items-center focus:outline-none">
+                <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl">
+                    <button class="w-full text-left flex justify-between text-gray-700 dark:text-gray-300 items-center focus:outline-none">
                         <h3 class="md:text-lg text-md mr-2 font-semibold">What are your payment terms?</h3>
                         <span class="text-2xl transition-transform duration-300">+</span>
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0">
-                        <p class="text-sm text-gray-600 pt-2">For most projects, I require a 50% deposit to begin work, with the remaining 50% due upon completion. For larger projects, we can arrange milestone payments. I accept various payment methods including bank transfer, PayPal, and credit cards.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 pt-2">For most projects, I require a 50% deposit to begin work, with the remaining 50% due upon completion. For larger projects, we can arrange milestone payments. I accept various payment methods including bank transfer, PayPal, and credit cards.</p>
                     </div>
                 </div>
             </div>
@@ -290,12 +308,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-500">
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Certifications -->
-            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 py-6">
-                <p class="text-sm text-gray-600">© <span id="copyright"></span> The Creative House</p>
-                <p class="text-sm text-gray-600">Designed by <a target="_blank" href="https://www.klevadev.com" class="text-primary">Clever Designer</a></p>
+            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 dark:border-gray-800 py-6">
+                <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="copyright"></span> The Creative House</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Designed by <a target="_blank" href="https://www.klevadev.com" class="text-primary">Clever Designer</a></p>
             </div>
         </div>
     </footer>
@@ -363,6 +381,43 @@
 
                 button.classList.toggle('text-primary')
             });
+        });
+    </script>
+
+    <!-- Dark mode toggle (optional - add this if you want a toggle button) -->
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+
+        // Initialize theme based on localStorage or OS preference
+        const userPref = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userPref === 'true' || (userPref === null && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        } else {
+            document.documentElement.classList.remove('dark');
+            if (moonIcon && sunIcon) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        // Toggle function
+        toggleButton?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
+            }
         });
     </script>
 

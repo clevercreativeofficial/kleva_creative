@@ -32,6 +32,7 @@
     <!-- Custom style -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -44,10 +45,10 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-900">
 
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
             <div class="animate-bounce">
                 <img class="w-16 animate-pulse" src="assets/images/logo.svg" alt="">
@@ -59,7 +60,7 @@
     </div>
 
     <!-- navbar -->
-    <nav class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 border-b border-gray-100 z-50">
+    <nav class="navbar sticky top-0 md:max-h-none max-h-[80px] backdrop-blur-lg bg-white bg-opacity-75 dark:bg-gray-800 dark:bg-opacity-75 border-b border-gray-100 dark:border-gray-700 z-50">
         <!-- container -->
         <div class="max-w-[1200px] m-auto px-3 flex justify-between items-center">
             <div class="w-10 py-4">
@@ -68,17 +69,17 @@
                 </a>
             </div>
 
-            <ul id="navItems" class="md:relative fixed top-0 left-0 md:bg-transparent bg-white md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
+            <ul id="navItems" class="md:relative fixed top-0 left-0 md:bg-transparent bg-white dark:bg-gray-800 md:w-auto w-4/5 md:min-h-auto md:h-auto md:min-h-0 min-h-screen flex md:-translate-x-[0] -translate-x-[750px] duration-500 md:flex md:flex-row flex-col text-sm font-medium text-gray-700 dark:text-gray-300 md:items-center justify-start md:px-0 px-10 md:py-0 py-3 md:gap-10 md:mb-0 mb-6 gap-6 z-50">
                 <div class="md:hidden block w-32 pb-4">
                     <a href="/">
                         <img src="/assets/images/logo/logo_color.svg" alt="logo">
                     </a>
                 </div>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
-                <li><a class="hover:text-primary text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
-                <li><a class="hover:text-primary duration-300 ease-in-out" href="/secteurs">Projects</a></li>
-                <a href="/contact" class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white">
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/">Home</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary text-primary duration-300 ease-in-out" href="/apropos">About</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/services">Services</a></li>
+                <li><a class="hover:text-primary dark:hover:text-primary duration-300 ease-in-out" href="/secteurs">Projects</a></li>
+                <a href="/contact" class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 bg-primary text-white dark:text-gray-100">
                     <i class="fi fi-rr-envelope translate-y-0.5 inline-block"></i>
                     Contact
                 </a>
@@ -93,31 +94,31 @@
 
     <!-- About Hero Section -->
     <section class="hidden max-w-[1200px] m-auto my-4 px-3 flex justify-between items-center">
-        <div class="w-full bg-white py-10 lg:px-10 px-3 rounded-xl">
+        <div class="w-full bg-white dark:bg-gray-800 py-10 lg:px-10 px-3 rounded-xl">
             <div class="flex flex-col lg:flex-row lg:gap-10 gap-5">
                 <div class="w-full lg:text-left text-center">
                     <h2 class="text-primary lg:text-[2.5rem] text-[2rem] font-semibold">
                         About Me
                     </h2>
 
-                    <h4 class="text-gray-600 text-xl lg:mt-2 mt-0 mb-4">
+                    <h4 class="text-gray-600 dark:text-gray-300 text-xl lg:mt-2 mt-0 mb-4">
                         My Journey in Design & Development
                     </h4>
 
-                    <p class="max-w-[926px] text-base text-gray-600">
+                    <p class="max-w-[926px] text-base text-gray-600 dark:text-gray-400">
                         I'm Clever Creative, a passionate designer and developer with over 9 years of experience creating digital experiences that matter. My journey began with a love for visual storytelling and evolved into a career where I bridge the gap between aesthetics and functionality.
                     </p>
 
                     <div class="flex lg:justify-start justify-center gap-2 mt-4">
                         <a href="/resume">
-                            <button class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 px-4 bg-primary text-sm font-medium text-white">
+                            <button class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 px-4 bg-primary text-sm font-medium text-white dark:text-gray-100">
                                 <i class="fi fi-rr-document translate-y-0.5"></i>
                                 My Resume
                             </button>
                         </a>
 
                         <a href="/contact">
-                            <button class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 px-4 bg-gray-600 text-sm font-medium text-white">
+                            <button class="inline-block flex justify-center items-center gap-2 rounded-lg min-w-[125px] h-8 px-4 bg-gray-600 dark:bg-gray-700 text-sm font-medium text-white dark:text-gray-100">
                                 <i class="fi fi-rr-envelope translate-y-0.5"></i>
                                 Contact Me
                             </button>
@@ -129,22 +130,22 @@
     </section>
 
     <!-- My Story Section -->
-    <section class="bg-gray-100 md:py-20 py-10">
+    <section class="bg-gray-100 dark:bg-gray-900 md:py-20 py-10">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="grid md:grid-cols-2 gap-10 items-centers">
                 <div>
-                    <h2 class="text-3xl font-semibold text-gray-700 mb-4">My Story</h2>
-                    <p class="text-base text-gray-600 mb-4">
+                    <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4">My Story</h2>
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         My design journey began in 2014 when I first discovered my passion for visual communication. What started as a hobby quickly turned into a career as I realized the power of design to solve problems and create meaningful connections.
                     </p>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base text-gray-600 dark:text-gray-400 mb-4">
                         Over the years, I've had the privilege of working with startups, established businesses, and non-profits across various industries. Each project has taught me something new and helped me refine my approach to design and development.
                     </p>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         Today, I combine my expertise in graphic design with web development skills to create cohesive digital experiences that are both beautiful and functional.
                     </p>
                 </div>
-                <div class="bg-white h-[450px] rounded-3xl shadow-sm overflow-hidden">
+                <div class="bg-white dark:bg-gray-800 h-[450px] rounded-3xl shadow-sm dark:shadow-gray-800/50 overflow-hidden">
                     <img src="https://wrexham.ac.uk/media/marketing/art-/Graphic-Design-course-page-header.jpg" 
                         alt="Design workspace" 
                         class="w-full h-auto rounded-lg">
@@ -154,43 +155,43 @@
     </section>
 
     <!-- My Approach Section -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">My Approach</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">My Approach</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 Every project is unique, but my process remains consistent to ensure quality and effectiveness.
             </p>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Approach 1 -->
-                <div class="bg-gray-100 p-6 rounded-xl">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-search-alt"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Research & Discovery</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         I begin by understanding your business, audience, and goals to create solutions that truly fit your needs.
                     </p>
                 </div>
 
                 <!-- Approach 2 -->
-                <div class="bg-gray-100 p-6 rounded-xl">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-pencil-paintbrush"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Design & Prototyping</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         Through iterative design, I create prototypes that bring concepts to life before any code is written.
                     </p>
                 </div>
 
                 <!-- Approach 3 -->
-                <div class="bg-gray-100 p-6 rounded-xl">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
                     <div class="text-4xl text-primary mb-4">
                         <i class="fi fi-rr-browser"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-4">Development & Testing</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         I build robust solutions that are thoroughly tested across devices to ensure flawless performance.
                     </p>
                 </div>
@@ -199,42 +200,42 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 text-center mb-4">Skills & Expertise</h2>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto text-center mb-8">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 text-center mb-4">Skills & Expertise</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center mb-8">
                 I've developed a diverse skill set that allows me to handle projects from concept to completion.
             </p>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Design Skills -->
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
                     <h3 class="text-xl text-primary font-medium mb-4 flex items-center gap-2">
                         <i class="fi fi-rr-pencil-paintbrush inline-block translate-y-0.5"></i>
                         Design Skills
                     </h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">UI/UX Design</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">UI/UX Design</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">Brand Identity</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">Brand Identity</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">Typography</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">Typography</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">Illustration</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">Illustration</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
                             </div>
                         </li>
@@ -242,33 +243,33 @@
                 </div>
 
                 <!-- Development Skills -->
-                <div class="bg-white p-6 rounded-xl">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl">
                     <h3 class="text-xl text-primary font-medium mb-4 flex items-center gap-2">
                         <i class="fi fi-rr-browser inline-block translate-y-0.5"></i>
                         Development Skills
                     </h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">HTML/CSS</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">HTML/CSS</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">JavaScript</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">JavaScript</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">React</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">React</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
                             </div>
                         </li>
                         <li class="flex items-center">
-                            <span class="w-32 text-gray-600">Node.js</span>
-                            <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                            <span class="w-32 text-gray-600 dark:text-gray-400">Node.js</span>
+                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
                             </div>
                         </li>
@@ -277,29 +278,29 @@
             </div>
 
             <!-- Tools Section -->
-            <div class="mt-8 bg-white p-6 rounded-xl">
+            <div class="mt-8 bg-white dark:bg-gray-800 p-6 rounded-xl">
                 <h3 class="text-xl text-primary font-medium mb-4 flex items-center gap-2">
                     <i class="fi fi-rr-settings inline-block translate-y-0.5"></i>
                     Tools I Use
                 </h3>
                 <div class="flex flex-wrap gap-4">
-                    <span class="bg-primary/10 text-gray-600 px-4 py-2 rounded-full flex items-center gap-2">
+                    <span class="bg-primary/10 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-full flex items-center gap-2">
                         <i class="fi fi-brands-figma inline-block translate-y-0.5"></i>
                         Figma
                     </span>
-                    <span class="bg-primary/10 text-gray-600 px-4 py-2 rounded-full flex items-center gap-2">
+                    <span class="bg-primary/10 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-full flex items-center gap-2">
                         <i class="fi fi-brands-adobe inline-block translate-y-0.5"></i>
                         Adobe Suite
                     </span>
-                    <span class="bg-primary/10 text-gray-600 px-4 py-2 rounded-full flex items-center gap-2">
+                    <span class="bg-primary/10 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-full flex items-center gap-2">
                         <i class="fi fi-rr-code-branch inline-block translate-y-0.5"></i>
                         Git
                     </span>
-                    <span class="bg-primary/10 text-gray-600 px-4 py-2 rounded-full flex items-center gap-2">
+                    <span class="bg-primary/10 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-full flex items-center gap-2">
                         <i class="fi fi-brands-visual-basic inline-block translate-y-0.5"></i>
                         VS Code
                     </span>
-                    <span class="bg-primary/10 text-gray-600 px-4 py-2 rounded-full flex items-center gap-2">
+                    <span class="bg-primary/10 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-full flex items-center gap-2">
                         <i class="fi fi-rr-cube inline-block translate-y-0.5"></i>
                         Blender
                     </span>
@@ -309,43 +310,43 @@
     </section>
 
     <!-- Fun Facts Section -->
-    <section class="bg-white py-16">
+    <section class="bg-white dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-4 text-center">Fun Facts</h2>
-            <p class="text-base text-gray-600 text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Fun Facts</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
                 A few personal tidbits that make me who I am beyond design and development.
             </p>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Fact 1 -->
-                <div class="bg-gray-100 p-6 rounded-xl text-center">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center">
                     <div class="text-4xl text-primary mb-4 mx-auto w-fit">
                         <i class="fi fi-rr-mug-hot"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-2">Coffee Connoisseur</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         I've tasted coffee from over 20 countries and have a small home roasting setup.
                     </p>
                 </div>
 
                 <!-- Fact 2 -->
-                <div class="bg-gray-100 p-6 rounded-xl text-center">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center">
                     <div class="text-4xl text-primary mb-4 mx-auto w-fit">
                         <i class="fi fi-rr-music"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-2">Music Lover</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         I play guitar and have an eclectic taste in music from jazz to electronic.
                     </p>
                 </div>
 
                 <!-- Fact 3 -->
-                <div class="bg-gray-100 p-6 rounded-xl text-center">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center">
                     <div class="text-4xl text-primary mb-4 mx-auto w-fit">
                         <i class="fi fi-rr-plane"></i>
                     </div>
                     <h3 class="text-xl text-primary font-medium mb-2">Avid Traveler</h3>
-                    <p class="text-base text-gray-600">
+                    <p class="text-base text-gray-600 dark:text-gray-400">
                         I've visited 15 countries and counting, always seeking new inspiration.
                     </p>
                 </div>
@@ -354,7 +355,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
             <div class="bg-primary text-white p-10 rounded-xl text-center">
                 <h2 class="text-2xl font-semibold mb-4">Ready to work together?</h2>
@@ -372,12 +373,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-500">
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400">
         <div class="max-w-[1200px] mx-auto px-4">
             <!-- Certifications -->
-            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 py-6">
-                <p class="text-sm text-gray-600">© <span id="copyright"></span> The Creative House</p>
-                <p class="text-sm text-gray-600">Designed by <a target="_blank" href="https://www.klevadev.com" class="text-primary">Clever Designer</a></p>
+            <div class="text-center flex md:flex-row flex-col justify-between border-t border-gray-200 dark:border-gray-800 py-6">
+                <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="copyright"></span> The Creative House</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Designed by <a target="_blank" href="https://www.klevadev.com" class="text-primary">Clever Designer</a></p>
             </div>
         </div>
     </footer>
@@ -439,6 +440,43 @@
 
                 button.classList.toggle('text-primary')
             });
+        });
+    </script>
+
+    <!-- Dark mode toggle (optional - add this if you want a toggle button) -->
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+
+        // Initialize theme based on localStorage or OS preference
+        const userPref = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userPref === 'true' || (userPref === null && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+        } else {
+            document.documentElement.classList.remove('dark');
+            if (moonIcon && sunIcon) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        // Toggle function
+        toggleButton?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+
+            if (moonIcon && sunIcon) {
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
+            }
         });
     </script>
 
