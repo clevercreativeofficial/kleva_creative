@@ -3,12 +3,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: "Quicksand", sans-serif;
 }
 
+/* Light mode selection */
 ::selection{
-  background-color: #74826059;
+  background-color: #7482602f;
   color: #414b33;
+}
+
+/* Dark mode selection */
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #414b33;
+    color: #e6e9d8;
+  }
 }
 
 h1, h2, h3, h4{

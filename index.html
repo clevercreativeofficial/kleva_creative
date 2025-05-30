@@ -62,7 +62,7 @@
     </div>
 
     <!-- theme toggler -->
-    <div class="fixed md:bottom-20 bottom-10 right-0 w-full z-[99]">
+    <div class="fixed md:bottom-20 bottom-6 right-0 w-full z-[99]">
         <div class="max-w-[1200px] m-auto md:px-10 px-3 flex justify-end items-center">
             <div id="themeToggle"
                 class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
@@ -247,7 +247,7 @@
     </section>
 
     <!-- Featured projects -->
-    <section class="bg-white dark:bg-gray-900 flex items-center md:py-20 py-10">
+    <section class="bg-white dark:bg-gray-800 flex items-center md:py-20 py-10">
         <div class="max-w-[1200px] mx-auto px-3">
             <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Featured Projects</h2>
             <p class="text-base text-gray-600 dark:text-gray-400">
@@ -344,98 +344,123 @@
     <!-- Testimonials Section -->
     <section class="bg-gray-100 dark:bg-gray-900 py-16">
         <div class="max-w-[1200px] mx-auto px-3">
-            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4">What Clients Say</h2>
-            <p class="text-base text-gray-600 dark:text-gray-400">
-                Don't just take my word for it. Here's what my clients have to say about working with me.
+            <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mb-4 text-center">Client Testimonials</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-10">
+                What my clients say about working with me on these projects.
             </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
-                                class="w-full h-full object-cover">
+            <div id="carousel" class="carousel mx-[-8px]"> <!-- compensate px-2 -->
+                <div class="px-2">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Marketing Director, TechCorp</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-medium text-gray-700 dark:text-gray-200">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Marketing Director, TechCorp</p>
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
+                            <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
+                            <p class="mt-2">Working with Clever was an absolute pleasure. Their design skills
+                                transformed
+                                our brand identity and the website they built has significantly improved our conversion
+                                rates.</p>
                         </div>
-                    </div>
-                    <div class="text-gray-600 dark:text-gray-400 mb-4">
-                        <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
-                        <p class="mt-2">Working with Clever was an absolute pleasure. Their design skills transformed
-                            our brand identity and the website they built has significantly improved our conversion
-                            rates.</p>
-                    </div>
-                    <div class="flex text-yellow-400">
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
-                                class="w-full h-full object-cover">
+                <div class="px-2">
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Michael Chen</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Startup Ventures</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-medium text-gray-700 dark:text-gray-200">Michael Chen</h4>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Startup Ventures</p>
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
+                            <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
+                            <p class="mt-2">Clever's attention to detail and creative approach helped us stand out in a
+                                crowded market. The UI/UX work was exceptional and our users love the new interface.</p>
                         </div>
-                    </div>
-                    <div class="text-gray-600 dark:text-gray-400 mb-4">
-                        <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
-                        <p class="mt-2">Clever's attention to detail and creative approach helped us stand out in a
-                            crowded market. The UI/UX work was exceptional and our users love the new interface.</p>
-                    </div>
-                    <div class="flex text-yellow-400">
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez"
-                                class="w-full h-full object-cover">
+                <div class="px-2">
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Emma Rodriguez</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Creative Director, BrandWorks</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-medium text-gray-700 dark:text-gray-200">Emma Rodriguez</h4>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Creative Director, BrandWorks</p>
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
+                            <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
+                            <p class="mt-2">We've worked with many designers, but Clever truly understands how to
+                                balance
+                                aesthetics with functionality. Their work consistently exceeds our expectations.</p>
                         </div>
-                    </div>
-                    <div class="text-gray-600 dark:text-gray-400 mb-4">
-                        <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
-                        <p class="mt-2">We've worked with many designers, but Clever truly understands how to balance
-                            aesthetics with functionality. Their work consistently exceeds our expectations.</p>
-                    </div>
-                    <div class="flex text-yellow-400">
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star"></i>
-                        <i class="fi fi-sr-star-half"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Client Logos (optional) -->
-            <div class="hidden mt-16 flex flex-wrap justify-center items-center gap-8 opacity-70">
-                <img src="https://via.placeholder.com/120x60?text=Client+1" alt="Client Logo" class="h-8">
-                <img src="https://via.placeholder.com/120x60?text=Client+2" alt="Client Logo" class="h-8">
-                <img src="https://via.placeholder.com/120x60?text=Client+3" alt="Client Logo" class="h-8">
-                <img src="https://via.placeholder.com/120x60?text=Client+4" alt="Client Logo" class="h-8">
+                <div class="px-2">
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-800/50">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700 dark:text-gray-200">Michael Chen</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Startup Ventures</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-600 dark:text-gray-400 mb-4">
+                            <i class="fi fi-rr-quote-right text-primary text-2xl opacity-20"></i>
+                            <p class="mt-2">Clever's attention to detail and creative approach helped us stand out in a
+                                crowded market. The UI/UX work was exceptional and our users love the new interface.</p>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                            <i class="fi fi-rr-star"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -488,11 +513,29 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.carousel').slick({
-                slidesToShow: 1,
+            $('#carousel').slick({
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 5000,
+                dots: true,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         });
     </script>
