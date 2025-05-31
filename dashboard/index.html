@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-here it's a minimul version, just add light/dark classes
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +26,7 @@ here it's a minimul version, just add light/dark classes
     <meta name="theme-color" content="#748260">
 
     <!-- favicon -->
-    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
 
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -45,9 +41,15 @@ here it's a minimul version, just add light/dark classes
 
     <!-- Custom style -->
     <script src="../assets/js/tailwindConfig.js"></script>
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-950">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- loader -->
     <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
@@ -56,13 +58,9 @@ here it's a minimul version, just add light/dark classes
             </div>
         </div>
     </div>
-    <!-- overlay -->
-    <div
-        class="overlay md:translate-x-full translate-x-[750px] duration-300 bg-gray-900 bg-opacity-75 fixed top-0 left-0 w-full h-screen z-50">
-    </div>
 
     <!-- navbar -->
-    <nav class="sticky top-0 h-[80px] backdrop-blur-lg bg-white dark:bg-gray-950 bg-opacity-75 dark:bg-opacity-75 border-b border-gray-200 dark:border-gray-900 z-50">
+    <nav class="sticky top-0 h-[80px] backdrop-blur-lg bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 z-50">
         <div class="w-full h-full px-3 flex justify-between items-center">
             <div id="logo-container" class="w-[250px] flex items-center justify-between gap-3 z-20">
                 <div id="logo" class="w-10 py-4">
@@ -70,14 +68,11 @@ here it's a minimul version, just add light/dark classes
                         <img src="../assets/images/logo.svg" alt="logo">
                     </a>
                 </div>
-                <div id="menu-bar"
-                    class="w-8 h-8 flex items-center justify-center text-gray-700 dark:text-white rounded cursor-pointer ml-2 z-50 text-center">
+                <div id="menu-bar" class="w-8 h-8 flex items-center justify-center text-gray-700 dark:text-gray-300 rounded cursor-pointer ml-2 z-50">
                     <i class="fi fi-rr-sidebar-flip text-lg"></i>
                 </div>
             </div>
-            <!-- theme toggler -->
-            <div id="themeToggle"
-                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+            <div id="themeToggle" class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
                 <span class="sun">
                     <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
                 </span>
@@ -89,32 +84,34 @@ here it's a minimul version, just add light/dark classes
     </nav>
 
     <!-- sidebar -->
-    <div id="sidebar"
-        class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden border-r border-gray-200 dark:border-gray-900 z-20">
+    <div id="sidebar" class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-20">
         <ul class="flex flex-col gap-2">
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg bg-primary dark:bg-primary-600" href="/admin">
+                <a class="inline-block text-sm w-full text-white px-3 py-2 rounded-lg bg-primary" href="/admin">
                     <i class="fi fi-rr-dashboard text-[16px] translate-y-0.5 inline-block mx-1"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 duration-300"
-                    href="/admin/projects">
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300" href="/admin/profile">
+                    <i class="fi fi-rr-user text-[16px] translate-y-0.5 inline-block mx-1"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300" href="/admin/projects">
                     <i class="fi fi-rr-excavator text-[16px] translate-y-0.5 inline-block mx-1"></i>
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 duration-300"
-                    href="/admin/testimonials">
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300" href="/admin/testimonials">
                     <i class="fi fi-rr-users translate-y-0.5 inline-block mx-1"></i>
                     <span>Testimonials</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 duration-300"
-                    href="/admin/address">
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300" href="/admin/address">
                     <i class="fi fi-rr-marker text-[16px] translate-y-0.5 inline-block mx-1"></i>
                     <span>Address</span>
                 </a>
@@ -122,8 +119,7 @@ here it's a minimul version, just add light/dark classes
         </ul>
 
         <div id="logout" class="absolute bottom-2 left-0 w-[275px] px-3 text-center">
-            <a href=""
-                class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-rose-500 hover:text-white bg-gray-100 dark:bg-gray-900 duration-300">
+            <a href="" class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-rose-500 hover:text-white bg-gray-100 dark:bg-gray-800 duration-300">
                 <i class="fi fi-rr-sign-out-alt translate-y-0.5 inline-block mx-1"></i>
                 <span>Logout</span>
             </a>
@@ -131,10 +127,10 @@ here it's a minimul version, just add light/dark classes
     </div>
 
     <!-- Main Dashboard Section -->
-    <section class="ml-[70px] w-[calc(100vw-70px)] min-h-[calc(100vh-80px)] md:py-8 py-4 md:px-6 px-3 bg-gray-50 dark:bg-gray-950">
+    <section class="ml-[70px] w-[calc(100vw-70px)] min-h-[calc(100vh-80px)] md:py-8 py-4 md:px-6 px-3 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto">
             <!-- Dashboard Header -->
-            <div class="w-full bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm">
+            <div class="w-full bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
                 <h1 class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-100">
                     Dashboard Overview
                 </h1>
@@ -147,8 +143,7 @@ here it's a minimul version, just add light/dark classes
             <!-- Metrics Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 my-8">
                 <!-- Project Card -->
-                <a href="/admin/projects"
-                    class="group bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 p-5 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                <a href="/admin/projects" class="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 p-5 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 flex justify-center items-center rounded-lg bg-green-100 dark:bg-green-900/30">
                             <i class="fi fi-rr-excavator text-lg text-green-600 dark:text-green-400"></i>
@@ -167,8 +162,7 @@ here it's a minimul version, just add light/dark classes
                     </ul>
                 </a>
                 <!-- Testimonials Card -->
-                <a href="/admin/testimonials"
-                    class="group bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 p-5 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                <a href="/admin/testimonials" class="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 p-5 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 flex justify-center items-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
                             <i class="fi fi-rr-users text-lg text-purple-600 dark:text-purple-400"></i>
