@@ -46,6 +46,10 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+    <!-- Quill is init -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
 
 </head>
 
@@ -135,7 +139,8 @@
             <div class="mb-8">
                 <div class="flex items-center justify-between mb-4">
                     <div>
-                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">Add New Project</h1>
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">Add New Project
+                        </h1>
                         <p class="text-gray-600 dark:text-gray-300">
                             Showcase your work with detailed project information and visuals
                         </p>
@@ -158,7 +163,8 @@
                                 <i class="fi fi-rr-info text-primary"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Basic Information</h2>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Basic Information
+                                </h2>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Core details about your project</p>
                             </div>
                         </div>
@@ -167,7 +173,8 @@
                             <!-- Left Column -->
                             <div class="space-y-6">
                                 <div>
-                                    <label for="projectTitle" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    <label for="projectTitle"
+                                        class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Project Title *
                                     </label>
                                     <input type="text" id="projectTitle" required
@@ -176,7 +183,8 @@
                                 </div>
 
                                 <div>
-                                    <label for="clientName" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    <label for="clientName"
+                                        class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Client Name *
                                     </label>
                                     <input type="text" id="clientName" required
@@ -185,7 +193,8 @@
                                 </div>
 
                                 <div>
-                                    <label for="projectYear" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    <label for="projectYear"
+                                        class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Project Year *
                                     </label>
                                     <select id="projectYear" required
@@ -200,7 +209,8 @@
                                 </div>
 
                                 <div>
-                                    <label for="projectUrl" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    <label for="projectUrl"
+                                        class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Live Project URL
                                     </label>
                                     <input type="url" id="projectUrl"
@@ -218,29 +228,34 @@
                                     <div class="grid grid-cols-2 gap-3">
                                         <label
                                             class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
-                                            <input type="radio" name="category" value="web-design" class="mr-3 accent-primary" checked>
+                                            <input type="radio" name="category" value="web-design"
+                                                class="mr-3 accent-primary" checked>
                                             <span class="flex-1 text-gray-600 dark:text-gray-300">Web Design</span>
                                         </label>
                                         <label
                                             class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
-                                            <input type="radio" name="category" value="web-dev" class="mr-3 accent-primary">
+                                            <input type="radio" name="category" value="web-dev"
+                                                class="mr-3 accent-primary">
                                             <span class="flex-1 text-gray-600 dark:text-gray-300">Web Development</span>
                                         </label>
                                         <label
                                             class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
-                                            <input type="radio" name="category" value="mobile" class="mr-3 accent-primary">
+                                            <input type="radio" name="category" value="mobile"
+                                                class="mr-3 accent-primary">
                                             <span class="flex-1 text-gray-600 dark:text-gray-300">Mobile App</span>
                                         </label>
                                         <label
                                             class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
-                                            <input type="radio" name="category" value="branding" class="mr-3 accent-primary">
+                                            <input type="radio" name="category" value="branding"
+                                                class="mr-3 accent-primary">
                                             <span class="flex-1 text-gray-600 dark:text-gray-300">Branding</span>
                                         </label>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label for="projectTags" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    <label for="projectTags"
+                                        class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Tags
                                     </label>
                                     <div
@@ -275,7 +290,8 @@
                                 <i class="fi fi-rr-document text-primary"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Project Description</h2>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Project Description
+                                </h2>
                                 <p class="text-sm text-gray-600 dark:text-gray-300">Tell the story behind your project
                                 </p>
                             </div>
@@ -283,7 +299,8 @@
 
                         <div class="space-y-6">
                             <div>
-                                <label for="shortDescription" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="shortDescription"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Short Description *
                                 </label>
                                 <textarea id="shortDescription" rows="6" required
@@ -292,24 +309,12 @@
                             </div>
 
                             <div>
-                                <label for="fullDescription" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="fullDescription"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Full Description *
                                 </label>
-                                <div class="border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden">
-                                    <div class="flex border-b border-gray-300 dark:border-gray-700">
-                                        <button type="button"
-                                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 font-medium border-r border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <i class="fi fi-rr-edit mr-2"></i>Edit
-                                        </button>
-                                        <button type="button"
-                                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <i class="fi fi-rr-eye mr-2"></i>Preview
-                                        </button>
-                                    </div>
-                                    <textarea id="fullDescription" rows="8"
-                                        class="w-full px-4 py-3 bg-transparent border-0 focus:ring-0 dark:bg-gray-700 dark:text-gray-200"
-                                        placeholder="Write a detailed description of your project including challenges, solutions, and outcomes...">
-                                    </textarea>
+                                <div class="bg-white overflow-hidden">
+                                    <div id="editor" class="outline-none min-h-[200px]"></div>
                                 </div>
                             </div>
 
@@ -377,7 +382,8 @@
                                         class="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
                                         <i class="fi fi-rr-cloud-upload text-2xl text-gray-400 translate-y-0.5"></i>
                                     </div>
-                                    <p class="font-medium text-gray-800 dark:text-gray-100 mb-2">Upload featured image</p>
+                                    <p class="font-medium text-gray-800 dark:text-gray-100 mb-2">Upload featured image
+                                    </p>
                                     <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
                                         Recommended: 1200×800px, PNG, JPG or WebP
                                     </p>
@@ -446,7 +452,8 @@
 
                             <!-- Video URL -->
                             <div>
-                                <label for="videoUrl" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="videoUrl"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Video URL (Optional)
                                 </label>
                                 <div class="flex gap-3">
@@ -471,14 +478,16 @@
                                 <i class="fi fi-rr-stats text-primary"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Results & Metrics</h2>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Results & Metrics
+                                </h2>
                                 <p class="text-sm text-gray-600 dark:text-gray-300">Quantify your project's impact</p>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                             <div>
-                                <label for="metric1Value" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="metric1Value"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Metric 1 Value
                                 </label>
                                 <input type="text" id="metric1Value"
@@ -486,7 +495,8 @@
                                     placeholder="35%">
                             </div>
                             <div>
-                                <label for="metric1Label" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="metric1Label"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Metric 1 Label
                                 </label>
                                 <input type="text" id="metric1Label"
@@ -503,7 +513,8 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="testimonial" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="testimonial"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Client Testimonial (Optional)
                                 </label>
                                 <textarea id="testimonial" rows="4"
@@ -511,7 +522,8 @@
                                     placeholder="Add a client quote..."></textarea>
                             </div>
                             <div>
-                                <label for="clientName" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                <label for="clientName"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                     Client Name & Title
                                 </label>
                                 <input type="text" id="clientName"
@@ -555,6 +567,26 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+    <!-- Include the Quill library -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    <!-- Initialize Quill editor -->
+    <script>
+        // Initialize Quill
+        const quill = new Quill( '#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    [ { 'header': [ 1, 2, 3, 4, 5, 6, false ] } ],
+                    [ 'bold', 'italic', 'underline' ],
+                    [ { 'list': 'ordered' }, { 'list': 'bullet' } ],
+                    [ 'link', 'image' ]
+                ]
+            },
+            placeholder: 'Write your project description here...',
+        } );
+    </script>
+    </script>
 
     <!-- Form Submission -->
     <script src="../../../assets/js/formValidation.js" defer></script>
