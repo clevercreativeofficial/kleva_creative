@@ -4,481 +4,569 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="italafrica">
+    <meta name="description"
+        content="Contact Clever Creative, a professional graphic designer and web developer. Reach out to discuss your project, request a quote, or start a collaboration.">
+    <meta name="keywords"
+        content="contact, graphic designer, web developer, hire, freelance, creative, collaboration, project inquiry, Clever Creative">
+    <meta name="author" content="Clever Creative">
+    <link rel="canonical" href="https://clevercreative.com/contact/">
+    <meta property="og:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta property="og:description"
+        content="Get in touch with Clever Creative for graphic design and web development services. Let's bring your ideas to life.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clevercreative.com/contact/">
+    <meta property="og:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta name="twitter:description"
+        content="Contact Clever Creative for professional graphic design and web development services.">
+    <meta name="twitter:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <title>Contact - Clever Creative | Graphic Designer & Web Developer</title>
+
+    <meta name="theme-color" content="#748260">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../../../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../assets/favicon/favicon.ico" type="image/x-icon">
 
     <!-- style -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <title>Italafrica Group | Home</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Flaticon Icons -->
+    <!-- flaticon icons -->
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 
-    <!-- Quill -->
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom style -->
+    <script src="../../../assets/js/tailwindConfig.js"></script>
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
 </head>
 
-<body class="bg-gray-950">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-gray-950 z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
-            <div
-                class="animate-spin rounded-full h-20 w-20 flex justify-center items-center border-b-2 border-r-2 border-green-700">
-                <div
-                    class="animate-spin rounded-full h-16 w-16 flex justify-center items-center border-b-2 border-r-2 border-white">
-                </div>
+            <div class="animate-bounce">
+                <img class="w-16 animate-pulse" src="../../assets/images/logo.svg" alt="">
             </div>
         </div>
     </div>
 
-    <!-- overlay -->
-    <div class="overlay fixed top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-75 z-50 hidden"></div>
-
     <!-- navbar -->
-    <nav class="sticky top-0 h-[80px] backdrop-blur-lg bg-gray-950 bg-opacity-75 border-b border-gray-900 z-50">
+    <nav
+        class="sticky top-0 h-[80px] backdrop-blur-lg bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 z-50">
         <div class="w-full h-full px-3 flex justify-between items-center">
             <div id="logo-container" class="w-[250px] flex items-center justify-between gap-3 z-20">
                 <div id="logo" class="w-10 py-4">
                     <a href="/">
-                        <img src="../../../assets/images/logo/logo_bc.svg" alt="logo">
+                        <img src="../../assets/images/logo.svg" alt="logo">
                     </a>
                 </div>
                 <div id="menu-bar"
-                    class="w-8 h-8 flex items-center justify-center text-white rounded cursor-pointer ml-2 z-50 text-center">
+                    class="w-8 h-8 flex items-center justify-center text-gray-700 dark:text-gray-300 rounded cursor-pointer ml-2 z-50">
                     <i class="fi fi-rr-sidebar-flip text-lg"></i>
                 </div>
             </div>
-            <div class="flex items-center gap-2">
-                <p class="sm:block hidden text-white text-sm">Awa Melvine</p>
-                <i class="fi fi-rr-circle-user translate-y-0.5 text-gray-400 text-2xl"></i>
+            <div id="themeToggle"
+                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+                <span class="sun">
+                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
+                </span>
+                <span class="moon hidden">
+                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
+                </span>
             </div>
         </div>
     </nav>
 
     <!-- sidebar -->
     <div id="sidebar"
-        class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-gray-950 overflow-x-hidden border-r border-gray-900 z-20">
+        class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-20">
         <ul class="flex flex-col gap-2">
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg bg-green-700" href="/admin">
-                    <i class="fi fi-rr-dashboard text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Dashboard</span>
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin">
+                    <i class="fi fi-rr-user text-[16px] translate-y-0.5 inline-block mx-1"></i>
+                    <span>Profile</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/projects">
-                    <i class="fi fi-rr-excavator text-[16px] translate-y-0.5 inline-block mx-1"></i>
+                    <i class="fi fi-rr-laptop text-[16px] translate-y-0.5 inline-block mx-1"></i>
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/products">
-                    <i class="fi fi-rr-boxes text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Products</span>
+                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/testimonials">
+                    <i class="fi fi-rr-stars translate-y-0.5 inline-block mx-1"></i>
+                    <span>Testimonials</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-90 duration-300"
-                    href="/admin/users">
-                    <i class="fi fi-rr-users translate-y-0.5 inline-block mx-1"></i>
-                    <span>Users</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/faqs">
-                    <i class="fi fi-rr-comments-question text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Faqs</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/subscribers/">
-                    <i class="fi fi-rr-newsletter-subscribe text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Subscribers</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/address">
-                    <i class="fi fi-rr-marker text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Address</span>
+                <a class="inline-block text-sm w-full text-white px-3 py-2 rounded-lg bg-primary" href="/admin/resume">
+                    <i class="fi fi-rr-document translate-y-0.5 inline-block mx-1"></i>
+                    <span>Resume</span>
                 </a>
             </li>
         </ul>
 
         <div id="logout" class="absolute bottom-2 left-0 w-[275px] px-3 text-center">
             <a href=""
-                class="inline-block text-sm w-full text-gray-300 px-4 py-2 rounded-lg hover:bg-rose-500 hover:text-white bg-gray-900 duration-300">
+                class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-rose-500 hover:text-white bg-gray-100 dark:bg-gray-800 duration-300">
                 <i class="fi fi-rr-sign-out-alt translate-y-0.5 inline-block mx-1"></i>
                 <span>Logout</span>
             </a>
         </div>
     </div>
 
-    <!-- Main Content Section -->
-    <section class="ml-[70px] w-[calc(100vw-70px)] min-h-[calc(100vh-80px)] md:py-8 py-4 md:px-6 px-3 bg-gray-950">
-        <div class="max-w-4xl mx-auto">
-            <!-- Header Section -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                <div>
-                    <h1 class="text-2xl font-semibold text-gray-100">Create New Project</h1>
-                    <p class="text-sm text-gray-400 mt-1">Add details about your construction project</p>
+    <!-- Add Project Page -->
+    <section class="md:py-12 py-6">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <!-- Page Header -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">Add New Project</h1>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Showcase your work with detailed project information and visuals
+                        </p>
+                    </div>
+                    <button onclick="history.back()"
+                        class="flex items-center gap-2 px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fi fi-rr-angle-small-left translate-y-0.5"></i>
+                        Back to Projects
+                    </button>
                 </div>
-                <a href="/admin/projects"
-                    class="sm:w-fit w-full h-10 flex justify-center items-center text-sm gap-2 px-4 rounded-lg bg-green-700 text-gray-200 hover:bg-gray-700 transition-colors shadow-sm">
-                    <i class="fi fi-rr-list text-sm translate-y-0.5 inline-block"></i>
-                    <div>Back to Projects</div>
-                </a>
             </div>
 
-            <!-- Product Form -->
-            <div
-                class="md:bg-gray-900 bg-transparent rounded-xl shadow-sm border md:border-gray-800 border-transparent md:p-6 p-0">
-                <form action="" class="grid gap-6">
+            <!-- Main Form -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <form id="addProjectForm" class="divide-y divide-gray-200 dark:divide-gray-700">
                     <!-- Basic Information Section -->
-                    <div class="space-y-4">
-                        <h2 class="text-lg font-medium text-gray-200 border-b md:border-gray-800 border-gray-900 pb-2">Project Details</h2>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Project Title -->
-                            <div class="space-y-1">
-                                <label for="projectTitle" class="block text-sm font-medium text-gray-300">Project Title*</label>
-                                <input type="text" id="projectTitle" placeholder="e.g. Inzovu Mall" required
-                                    class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                                <p class="text-xs text-gray-400">Enter the official project name</p>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-info text-primary"></i>
                             </div>
-                            
-                            <!-- Location -->
-                            <div class="space-y-1">
-                                <label for="projectLocation" class="block text-sm font-medium text-gray-300">Location*</label>
-                                <input type="text" id="projectLocation" placeholder="e.g. Bujumbura, Burundi" required
-                                    class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                                <p class="text-xs text-gray-400">City and country where project is located</p>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Basic Information</h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Core details about your project</p>
                             </div>
                         </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Category -->
-                            <div class="space-y-1">
-                                <label for="projectCategory" class="block text-sm font-medium text-gray-300">Category*</label>
-                                <select id="projectCategory" required
-                                    class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                                    <option value="" disabled selected>Select category</option>
-                                    <option value="commercial">Commercial</option>
-                                    <option value="healthcare">Healthcare</option>
-                                    <option value="hospitality">Hospitality</option>
-                                    <option value="infrastructure">Infrastructure</option>
-                                    <option value="residential">Residential</option>
-                                </select>
-                                <p class="text-xs text-gray-400">Select the project type</p>
-                            </div>
-                            
-                            <!-- Total Area -->
-                            <div class="space-y-1">
-                                <label for="projectArea" class="block text-sm font-medium text-gray-300">Total Area*</label>
-                                <div class="relative">
-                                    <input type="text" id="projectArea" placeholder="e.g. 200,000" required
-                                        class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg pr-10">
-                                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 text-sm">sqm</span>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <!-- Left Column -->
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="projectTitle" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Project Title *
+                                    </label>
+                                    <input type="text" id="projectTitle" required
+                                        class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                        placeholder="Eco Market: Sustainable E-commerce Redesign">
                                 </div>
-                                <p class="text-xs text-gray-400">Total built area in square meters</p>
+
+                                <div>
+                                    <label for="clientName" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Client Name *
+                                    </label>
+                                    <input type="text" id="clientName" required
+                                        class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                        placeholder="Eco Market Inc.">
+                                </div>
+
+                                <div>
+                                    <label for="projectYear" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Project Year *
+                                    </label>
+                                    <select id="projectYear" required
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors">
+                                        <option value="">Select Year</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023" selected>2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="projectUrl" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Live Project URL
+                                    </label>
+                                    <input type="url" id="projectUrl"
+                                        class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                        placeholder="https://ecomarket.example.com">
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Client Name -->
-                            <div class="space-y-1">
-                                <label for="projectClient" class="block text-sm font-medium text-gray-300">Client Name*</label>
-                                <input type="text" id="projectClient" placeholder="e.g. Inzovu Group" required
-                                    class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                                <p class="text-xs text-gray-400">Name of the client or developer</p>
-                            </div>
-                            
-                            <!-- Italian Components -->
-                            <div class="space-y-1">
-                                <label for="projectComponents" class="block text-sm font-medium text-gray-300">Italian Components</label>
-                                <input type="text" id="projectComponents" placeholder="e.g. Roofing, Seating, Facade"
-                                    class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                                <p class="text-xs text-gray-400">Components supplied from Italy (comma separated)</p>
+
+                            <!-- Right Column -->
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Project Category *
+                                    </label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <label
+                                            class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
+                                            <input type="radio" name="category" value="web-design" class="mr-3 accent-primary" checked>
+                                            <span class="flex-1 text-gray-600 dark:text-gray-300">Web Design</span>
+                                        </label>
+                                        <label
+                                            class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
+                                            <input type="radio" name="category" value="web-dev" class="mr-3 accent-primary">
+                                            <span class="flex-1 text-gray-600 dark:text-gray-300">Web Development</span>
+                                        </label>
+                                        <label
+                                            class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
+                                            <input type="radio" name="category" value="mobile" class="mr-3 accent-primary">
+                                            <span class="flex-1 text-gray-600 dark:text-gray-300">Mobile App</span>
+                                        </label>
+                                        <label
+                                            class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
+                                            <input type="radio" name="category" value="branding" class="mr-3 accent-primary">
+                                            <span class="flex-1 text-gray-600 dark:text-gray-300">Branding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="projectTags" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Tags
+                                    </label>
+                                    <div
+                                        class="flex flex-wrap gap-2 p-3 border border-gray-300 dark:border-gray-700 rounded-xl min-h-[52px]">
+                                        <span
+                                            class="inline-flex items-center gap-1 bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm">
+                                            E-commerce
+                                            <button type="button" class="hover:text-primary-dark">
+                                                <i class="fi fi-rr-cross-small text-xs"></i>
+                                            </button>
+                                        </span>
+                                        <span
+                                            class="inline-flex items-center gap-1 bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm">
+                                            Sustainability
+                                            <button type="button" class="hover:text-primary-dark">
+                                                <i class="fi fi-rr-cross-small text-xs"></i>
+                                            </button>
+                                        </span>
+                                        <input type="text" id="projectTags"
+                                            class="flex-1 min-w-[120px] bg-transparent text-gray-600 dark:text-gray-300 border-0 outline-none focus:ring-0 px-0"
+                                            placeholder="Add a tag...">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Description Section -->
-                    <div class="space-y-4">
-                        <h2 class="text-lg font-medium text-gray-200 border-b md:border-gray-800 border-gray-900 pb-2">Project Description</h2>
-                        
-                        <!-- Project Overview -->
-                        <div class="space-y-1">
-                            <label for="projectOverview" class="block text-sm font-medium text-gray-300">Overview*</label>
-                            <textarea id="projectOverview" placeholder="Describe the project scope and features" required rows="4"
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg"></textarea>
-                            <p class="text-xs text-gray-400">Detailed description of the project (500 characters max)</p>
+
+                    <!-- Project Description Section -->
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-document text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Project Description</h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Tell the story behind your project
+                                </p>
+                            </div>
                         </div>
-                        
-                        <!-- Key Achievements -->
-                        <div class="space-y-1">
-                            <label for="projectAchievements" class="block text-sm font-medium text-gray-300">Key Achievements</label>
-                            <textarea id="projectAchievements" placeholder="e.g. LEED Certification, Fastest completion in region" rows="3"
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg"></textarea>
-                            <p class="text-xs text-gray-400">Notable accomplishments (comma separated)</p>
+
+                        <div class="space-y-6">
+                            <div>
+                                <label for="shortDescription" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Short Description *
+                                </label>
+                                <textarea id="shortDescription" rows="6" required
+                                    class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                    placeholder="Briefly describe your project (appears on project cards)"></textarea>
+                            </div>
+
+                            <div>
+                                <label for="fullDescription" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Full Description *
+                                </label>
+                                <div class="border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden">
+                                    <div class="flex border-b border-gray-300 dark:border-gray-700">
+                                        <button type="button"
+                                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 font-medium border-r border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+                                            <i class="fi fi-rr-edit mr-2"></i>Edit
+                                        </button>
+                                        <button type="button"
+                                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-50 dark:hover:bg-gray-700">
+                                            <i class="fi fi-rr-eye mr-2"></i>Preview
+                                        </button>
+                                    </div>
+                                    <textarea id="fullDescription" rows="8"
+                                        class="w-full px-4 py-3 bg-transparent border-0 focus:ring-0 dark:bg-gray-700 dark:text-gray-200"
+                                        placeholder="Write a detailed description of your project including challenges, solutions, and outcomes...">
+                                    </textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Services Provided *
+                                </label>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded" checked>
+                                        <span>UX Research</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded" checked>
+                                        <span>UI Design</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded">
+                                        <span>Front-end Development</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded">
+                                        <span>Back-end Development</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded">
+                                        <span>Brand Strategy</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-3 border border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 cursor-pointer transition-colors">
+                                        <input type="checkbox" class="mr-3 accent-primary rounded">
+                                        <span>Content Strategy</span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
-                    <!-- Media Section -->
-                    <div class="space-y-4">
-                        <h2 class="text-lg font-medium text-gray-200 border-b md:border-gray-800 border-gray-900 pb-2">Project Media</h2>
-                        
-                        <!-- Main Project Image -->
-                        <div class="space-y-1">
-                            <label class="block text-sm font-medium text-gray-300">Featured Image*</label>
-                            <label for="mainProjectImage" class="block w-full p-8 bg-gray-700/50 border border-dashed border-gray-600 rounded-lg cursor-pointer hover:border-green-500 hover:bg-gray-700 transition-colors duration-200 text-center">
-                                <input type="file" id="mainProjectImage" name="mainProjectImage" accept="image/*" class="hidden" required>
-                                <div class="flex flex-col items-center justify-center gap-2">
-                                    <i class="fi fi-rr-add-image text-2xl text-gray-500"></i>
-                                    <p class="text-sm text-gray-400">
-                                        <small class="font-medium text-sm text-green-400">Click to upload an image</small>
+
+                    <!-- Media & Visuals Section -->
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-gallery text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Media & Visuals</h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Add images, videos, and mockups</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Featured Image -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Featured Image *
+                                </label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-2xl p-8 text-center hover:border-primary transition-colors cursor-pointer">
+                                    <div
+                                        class="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
+                                        <i class="fi fi-rr-cloud-upload text-2xl text-gray-400 translate-y-0.5"></i>
+                                    </div>
+                                    <p class="font-medium text-gray-800 dark:text-gray-100 mb-2">Upload featured image</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                                        Recommended: 1200×800px, PNG, JPG or WebP
                                     </p>
-                                    <p class="text-xs text-gray-500">PNG, JPG (Max 10MB)</p>
+                                    <button type="button"
+                                        class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm px-6 py-2.5 rounded-xl transition-colors font-medium">
+                                        <i class="fi fi-rr-folder-open translate-y-0.5"></i>
+                                        Choose File
+                                    </button>
                                 </div>
-                            </label>
-                        </div>
-                        
-                        <!-- Additional Project Images -->
-                        <div class="space-y-1">
-                            <label class="block text-sm font-medium text-gray-300">Gallery Images</label>
-                            <label for="additionalProjectImages" class="block w-full p-8 bg-gray-700/50 border border-dashed border-gray-600 rounded-lg cursor-pointer hover:border-green-500 hover:bg-gray-700 transition-colors duration-200 text-center">
-                                <input type="file" id="additionalProjectImages" name="additionalProjectImages[]" accept="image/*" multiple class="hidden">
-                                <div class="flex flex-col items-center justify-center gap-2">
-                                    <i class="fi fi-rr-gallery text-2xl text-gray-500"></i>
-                                    <p class="text-sm text-gray-400">
-                                        <small class="font-medium text-sm text-green-400">Click to upload multiple files</small>
-                                    </p>
-                                    <p class="text-xs text-gray-500">Up to 20 images (Max 10MB each)</p>
+                            </div>
+
+                            <!-- Additional Images -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Gallery Images
+                                </label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <div
+                                        class="aspect-video rounded-xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700 hover:border-primary transition-colors cursor-pointer">
+                                        <div class="text-center">
+                                            <i class="fi fi-rr-plus mb-2 block text-2xl text-gray-400"></i>
+                                            <span class="text-sm text-gray-500">Add Image</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="aspect-video rounded-xl bg-gray-200 dark:bg-gray-700 relative group overflow-hidden">
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-edit"></i>
+                                            </button>
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-trash"></i>
+                                            </button>
+                                        </div>
+                                        <div class="absolute top-2 right-2">
+                                            <span class="px-2 py-1 bg-black/50 text-white text-xs rounded">Cover</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="aspect-video rounded-xl bg-gray-200 dark:bg-gray-700 relative group overflow-hidden">
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-edit"></i>
+                                            </button>
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="aspect-video rounded-xl bg-gray-200 dark:bg-gray-700 relative group overflow-hidden">
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-edit"></i>
+                                            </button>
+                                            <button type="button" class="p-2 bg-white/90 rounded-lg hover:bg-white">
+                                                <i class="fi fi-rr-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </label>
-                            
-                            <!-- Image Preview Container -->
-                            <div id="projectImagePreview" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-3 hidden">
-                                <!-- Preview thumbnails will be added here by JavaScript -->
+                            </div>
+
+                            <!-- Video URL -->
+                            <div>
+                                <label for="videoUrl" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Video URL (Optional)
+                                </label>
+                                <div class="flex gap-3">
+                                    <input type="url" id="videoUrl"
+                                        class="flex-1 px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                        placeholder="https://www.youtube.com/watch?v=...">
+                                    <select
+                                        class="px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors">
+                                        <option>YouTube</option>
+                                        <option>Vimeo</option>
+                                        <option>Loom</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Form Actions -->
-                    <div class="flex flex-col sm:flex-row justify-end gap-3 pt-4">
-                        <button type="submit" class="px-6 py-2.5 text-sm rounded-lg text-white bg-green-700 hover:bg-green-800 transition-colors duration-200 shadow-sm">
-                            Save Project
-                        </button>
+
+                    <!-- Results & Metrics Section -->
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-stats text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Results & Metrics</h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Quantify your project's impact</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div>
+                                <label for="metric1Value" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Metric 1 Value
+                                </label>
+                                <input type="text" id="metric1Value"
+                                    class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                    placeholder="35%">
+                            </div>
+                            <div>
+                                <label for="metric1Label" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Metric 1 Label
+                                </label>
+                                <input type="text" id="metric1Label"
+                                    class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                    placeholder="Increase in conversion rate">
+                            </div>
+                            <div class="flex items-end">
+                                <button type="button"
+                                    class="w-full px-4 py-3 border border-gray-300 text-sm text-gray-600 dark:text-gray-300 dark:hover:text-gray-700 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors">
+                                    Add Another Metric
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="testimonial" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Client Testimonial (Optional)
+                                </label>
+                                <textarea id="testimonial" rows="4"
+                                    class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                    placeholder="Add a client quote..."></textarea>
+                            </div>
+                            <div>
+                                <label for="clientName" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Client Name & Title
+                                </label>
+                                <input type="text" id="clientName"
+                                    class="w-full px-4 py-3 outline-none border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-gray-200 transition-colors"
+                                    placeholder="Sarah Johnson, CEO of Eco Market">
+                            </div>
+                        </div>
                     </div>
                 </form>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
+                <button type="button" onclick="history.back()"
+                    class="px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-xl text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+                    Cancel
+                </button>
+                <div class="flex gap-4">
+                    <button type="button"
+                        class="px-8 py-3 border border-gray-300 text-sm dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+                        Save as Draft
+                    </button>
+                    <button type="submit" form="addProjectForm"
+                        class="px-8 py-3 bg-primary hover:bg-primary-dark text-sm text-white rounded-xl transition-colors font-medium shadow-sm">
+                        Publish Project
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // JavaScript for image preview functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const mainImageInput = document.getElementById('mainProjectImage');
-            const additionalImagesInput = document.getElementById('additionalProjectImages');
-            const previewContainer = document.getElementById('projectImagePreview');
 
-            function handleImagePreview(event, isMainImage = false) {
-                const files = event.target.files;
-                if (!files || files.length === 0) return;
-
-                previewContainer.innerHTML = '';
-                previewContainer.classList.remove('hidden');
-
-                for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-                    if (!file.type.match('image.*')) continue;
-
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        const previewDiv = document.createElement('div');
-                        previewDiv.className = 'relative group';
-
-                        const img = document.createElement('img');
-                        img.src = e.target.result;
-                        img.className = 'w-full h-32 object-cover rounded-lg';
-
-                        const removeBtn = document.createElement('button');
-                        removeBtn.type = 'button';
-                        removeBtn.className = 'absolute top-2 right-2 w-8 h-8 bg-red-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200';
-                        removeBtn.innerHTML = '<i class="fi fi-rr-trash text-xs"></i>';
-                        removeBtn.onclick = function () {
-                            previewDiv.remove();
-                            if (previewContainer.children.length === 0) {
-                                previewContainer.classList.add('hidden');
-                            }
-                        };
-
-                        previewDiv.appendChild(img);
-                        previewDiv.appendChild(removeBtn);
-                        previewContainer.appendChild(previewDiv);
-                    };
-                    reader.readAsDataURL(file);
-                }
-            }
-
-            if (mainImageInput) {
-                mainImageInput.addEventListener('change', function (e) {
-                    handleImagePreview(e, true);
-                });
-            }
-
-            if (additionalImagesInput) {
-                additionalImagesInput.addEventListener('change', handleImagePreview);
-            }
-        });
-    </script>
 
     <!-- scripts -->
-    <script type="text/javascript" defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuBar = document.getElementById("menu-bar");
-            const logo = document.getElementById("logo");
-            const logoBox = document.getElementById('logo-container')
-            const sidebar = document.getElementById("sidebar");
-            const logout = document.getElementById("logout");
-            const logoutIcon = document.querySelector("#logout i");
-            const labelNames = document.querySelectorAll("span");
+    <script src="../../../assets/js/sidebar.js" defer></script>
 
-            // Define screen size breakpoint
-            const isSmallDevice = window.innerWidth <= 768; // Adjust breakpoint if needed
+    <!-- custom color -->
+    <script src="../../../assets/js/tailwind_config.js"></script>
 
-            if (!isSmallDevice) {
-                // On wider screens, load state from localStorage
-                const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
-                if (isCollapsed) {
-                    collapseSidebar();
-                } else {
-                    expandSidebar();
-                }
-            } else {
-                // On small devices, always collapse by default
-                collapseSidebar();
-            }
+    <!-- Slick carousel -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-            menuBar.addEventListener("click", () => {
-                const isNowCollapsed = sidebar.classList.toggle("w-[70px]");
-                logout.classList.toggle("w-[70px]");
-                logoutIcon.classList.toggle("mx-1");
-                logo.classList.toggle("hidden");
-                logoBox.classList.toggle("w-[70px]");
-                labelNames.forEach(label => label.classList.toggle("hidden"));
 
-                // Only store state in localStorage for wider screens
-                if (!isSmallDevice) {
-                    localStorage.setItem("sidebar-collapsed", isNowCollapsed);
-                }
-            });
+    <!-- Form Submission -->
+    <script src="../../../assets/js/formValidation.js" defer></script>
 
-            function collapseSidebar() {
-                sidebar.classList.add("w-[70px]");
-                logout.classList.add("w-[70px]");
-                logoutIcon.classList.add("mx-1");
-                logo.classList.add("hidden");
-                logoBox.classList.add("w-[70px]");
-                labelNames.forEach(label => label.classList.add("hidden"));
-            }
+    <!-- General scripts -->
+    <script src="../../../assets/js/scripts.js" defer></script>
 
-            function expandSidebar() {
-                sidebar.classList.remove("w-[70px]");
-                logout.classList.remove("w-[70px]");
-                logoutIcon.classList.remove("mx-1");
-                logo.classList.remove("hidden");
-                logoBox.classList.remove("w-[70px]");
-                labelNames.forEach(label => label.classList.remove("hidden"));
-            }
-        });
-    </script>
+    <!-- Dark mode toggle -->
+    <script src="../../../assets/js/theme.js" defer></script>
 
-    <!-- jQuery for Loader (if needed) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(window).on("load", function () {
-            $("#loader").fadeOut();
-        });
-    </script>
-
-    <!-- Copyright Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const copyrightElement = document.getElementById("copyright");
-            if (copyrightElement) {
-                copyrightElement.innerHTML = new Date().getFullYear();
-            }
-        });
-    </script>
-
-    <!-- JavaScript for Image Previews & Removal -->
-    <script>
-        const imageInput = document.getElementById('projectImages');
-        const previewContainer = document.getElementById('imagePreview');
-        let uploadedImages = []; // Stores selected files
-
-        // Handle file selection
-        imageInput.addEventListener('change', function (event) {
-            const files = Array.from(event.target.files);
-
-            files.forEach(file => {
-                if (file.type.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        uploadedImages.push({
-                            file: file,
-                            preview: e.target.result
-                        });
-                        updatePreview();
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-        });
-
-        // Update the preview UI
-        function updatePreview() {
-            previewContainer.innerHTML = '';
-
-            uploadedImages.forEach((image, index) => {
-                const previewItem = document.createElement('div');
-                previewItem.className = 'relative group rounded-lg overflow-hidden border border-gray-700';
-
-                previewItem.innerHTML = `
-                <img src="${image.preview}" class="w-full h-32 object-cover">
-                <button type="button" onclick="removeImage(${index})" 
-                    class="absolute top-2 right-2 w-8 h-8 bg-red-600 text-white p-1 rounded-full md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fi fi-rr-trash text-xs"></i>
-                </button>
-            `;
-                previewContainer.appendChild(previewItem);
-            });
-
-            // Sync with original file input (for form submission)
-            const dataTransfer = new DataTransfer();
-            uploadedImages.forEach(image => dataTransfer.items.add(image.file));
-            imageInput.files = dataTransfer.files;
-        }
-
-        // Remove an image
-        window.removeImage = function (index) {
-            uploadedImages.splice(index, 1);
-            updatePreview();
-        };
-    </script>
+    <!-- Projects -->
+    <script src="../../../assets/js/Projects.js" defer></script>
 </body>
 
 </html>
