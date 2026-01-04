@@ -495,3 +495,4 @@ async function submitProject ( status )
         alert( 'Error saving project. Please try again.' );
     }
 }
+

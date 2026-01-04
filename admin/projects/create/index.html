@@ -130,7 +130,7 @@
         <div id="logout" class="absolute bottom-4 left-0 w-[275px] px-3">
             <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-100 dark:bg-gray-800">
                 <div id="userProfile" class="flex items-center justify-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                    <div class="min-w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
                         <i class="fi fi-rr-user text-primary"></i>
                     </div>
                     <div class="flex-1">
@@ -151,7 +151,7 @@
         <div class="max-w-7xl mx-auto px-4 py-8">
             <!-- Page Header -->
             <div class="mb-8">
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between md:flex-row flex-col gap-6 mb-6">
                     <div>
                         <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">
                             Create New Case Study
@@ -161,7 +161,7 @@
                         </p>
                     </div>
                     <button type="button" onclick="window.history.back()"
-                        class="flex items-center gap-2 px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        class="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                         <i class="fi fi-rr-angle-small-left"></i>
                         Back
                     </button>
@@ -174,11 +174,11 @@
                     <!-- Hero Section -->
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                                 <i class="fi fi-rr-star text-primary"></i>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">
                                     Hero Section (Top of Case Study)
                                 </h2>
                                 <p class="text-sm text-gray-600 dark:text-gray-300">Main project overview and cover
@@ -190,16 +190,11 @@
                             <!-- Category Badge -->
                             <div>
                                 <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Category Badge *
+                                    Project Category Badge *
                                 </label>
-                                <select name="category" required
-                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700">
-                                    <option value="Design">Design</option>
-                                    <option value="Development">Development</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Sales">Sales</option>
-                                    <option value="Other">Other</option>
-                                </select>
+                                <input type="text" name="category_badge" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="E-Commerce Redesign">
                             </div>
 
                             <!-- Title & Excerpt -->
@@ -209,7 +204,8 @@
                                         class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Project Title *
                                     </label>
-                                    <input type="text" id="title" name="title" placeholder="Project Title" required
+                                    <input type="text" id="title" name="title"
+                                        placeholder="Eco Market: Sustainable Shopping Platform" required
                                         class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700">
                                 </div>
 
@@ -273,8 +269,19 @@
                                     </label>
                                     <input type="text" id="services" name="services" required
                                         class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                        placeholder="UX Research, UI Design, Front-end Development">
+                                        placeholder="UX Research, UI Design, Front-end">
                                 </div>
+                            </div>
+
+                            <!-- Project Duration -->
+                            <div>
+                                <label for="project_duration"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Project Duration *
+                                </label>
+                                <input type="text" id="project_duration" name="project_duration" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="12 Weeks">
                             </div>
 
                             <!-- Live URL -->
@@ -285,17 +292,201 @@
                                 </label>
                                 <input type="url" id="live_url" name="live_url"
                                     class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                    placeholder="https://ecomarket.com">
+                                    placeholder="https://www.ecomarket.com/">
                             </div>
 
                             <!-- Cover Image -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Cover Image URL*
+                                <label for="cover_image"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Cover Image URL *
                                 </label>
-                                <input type="url" id="live_url" name="live_url"
+                                <input type="url" id="cover_image" name="cover_image" required
                                     class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                    placeholder="https://image-url.com/image.jpg">
+                                    placeholder="https://images.unsplash.com/photo-1556740738-b6a63e27c4df">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Overview Section -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-document text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                                    Project Overview
+                                </h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Detailed project background and
+                                    context</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label for="overview_content"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Overview Content *
+                                </label>
+                                <textarea id="overview_content" name="overview_content" rows="5" required
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Eco Market, a pioneer in sustainable e-commerce, approached us with a challenge..."></textarea>
+                            </div>
+
+                            <!-- Challenges -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Challenges (List items, one per line) *
+                                </label>
+                                <textarea id="challenges" name="challenges" rows="4"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Confusing navigation that buried sustainable product categories
+Lack of clear sustainability indicators on product pages
+5-step checkout process with 68% abandonment rate"></textarea>
+                            </div>
+
+                            <!-- Approach Steps -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Approach Steps (List items, one per line) *
+                                </label>
+                                <textarea id="approach" name="approach" rows="4"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Discovery: User interviews, competitive analysis, and analytics review
+Strategy: Information architecture restructuring and user flows
+Design: Wireframing, prototyping, and usability testing"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Section -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-search text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                                    Research & User Insights
+                                </h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">User research findings and
+                                    competitive analysis</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Research Badge -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Research Section Badge
+                                </label>
+                                <input type="text" name="research_badge"
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="User Research">
+                            </div>
+
+                            <!-- Research Title -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Research Section Title
+                                </label>
+                                <input type="text" name="research_title"
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Understanding the Eco-Conscious Shopper">
+                            </div>
+
+                            <!-- User Insights -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    User Insights (Format: Number|Title|Description, one per line)
+                                </label>
+                                <textarea name="user_insights" rows="6"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="1|Sustainability Transparency|82% of users wanted clearer product sustainability credentials but distrusted vague claims
+2|Mobile-First Behavior|60% of traffic came from mobile, but only 22% of conversions"></textarea>
+                            </div>
+
+                            <!-- Competitive Analysis -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Competitive Analysis (Format: Title|Description, one per line)
+                                </label>
+                                <textarea name="competitive_analysis" rows="4"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Visual Differentiation|Most competitors used predictable 'earthy' palettes without distinct branding
+Filter Limitations|Only 25% offered sustainability-focused filtering options"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Solutions -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-palette text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                                    Design Solutions
+                                </h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Design process and visual solutions
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Design Badge -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Design Section Badge
+                                </label>
+                                <input type="text" name="design_badge"
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Design Solutions">
+                            </div>
+
+                            <!-- Design Title -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Design Section Title
+                                </label>
+                                <input type="text" name="design_title"
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Creating a Sustainable Shopping Experience">
+                            </div>
+
+                            <!-- Gallery Images -->
+                            <div class="space-y-4">
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Gallery Image URLs (one per line, 2 images recommended)
+                                </label>
+                                <textarea name="gallery_images" rows="3"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="https://images.unsplash.com/photo-1551288049-bebda4e38f71
+https://images.unsplash.com/photo-1460925895917-afdab827c52f"></textarea>
+                            </div>
+
+                            <!-- Design Content -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Design Solution Content
+                                </label>
+                                <textarea name="design_content" rows="4"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="We completely reorganized the information architecture to prioritize sustainability attributes..."></textarea>
+                            </div>
+
+                            <!-- Key Improvements -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Key Improvements (List items, one per line)
+                                </label>
+                                <textarea name="key_improvements" rows="4"
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Added 'Shop by Values' as primary navigation item
+Implemented sustainability badges with verification details
+Created 'Impact Dashboard' showing collective customer savings"></textarea>
                             </div>
                         </div>
                     </div>
@@ -303,7 +494,7 @@
                     <!-- Sidebar Highlights -->
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                                 <i class="fi fi-rr-bullet text-primary"></i>
                             </div>
                             <div>
@@ -315,65 +506,109 @@
                             </div>
                         </div>
 
-                        <div class="space-y-4" id="highlightsContainer">
-                            <!-- Highlights will be added here -->
-                        </div>
+                        <div class="space-y-4s grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Timeline -->
+                            <div>
+                                <label for="sidebar_timeline"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Timeline *
+                                </label>
+                                <input type="text" id="sidebar_timeline" name="sidebar_timeline" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="12 weeks (Research to Launch)">
+                            </div>
 
-                        <button type="button" onclick="addHighlight()"
-                            class="mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fi fi-rr-plus"></i>
-                            Add Highlight
-                        </button>
+                            <!-- Team -->
+                            <div>
+                                <label for="sidebar_team"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Team *
+                                </label>
+                                <input type="text" id="sidebar_team" name="sidebar_team" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="UX Designer, UI Designer, Front-end Developer">
+                            </div>
+
+                            <!-- Platform -->
+                            <div>
+                                <label for="sidebar_platform"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Platform *
+                                </label>
+                                <input type="text" id="sidebar_platform" name="sidebar_platform" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="Shopify Plus">
+                            </div>
+
+                            <!-- Key Metrics -->
+                            <div>
+                                <label for="sidebar_key_metrics"
+                                    class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Key Metrics *
+                                </label>
+                                <input type="text" id="sidebar_key_metrics" name="sidebar_key_metrics" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="35% conversion increase, 40% bounce rate reduction">
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Main Content Sections -->
+                    <!-- Services Provided -->
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                                <i class="fi fi-rr-layout-fluid text-primary"></i>
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-briefcase text-primary"></i>
                             </div>
                             <div>
                                 <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                                    Content Sections
+                                    Services Provided
                                 </h2>
-                                <p class="text-sm text-gray-600 dark:text-gray-300">Build your case study content
-                                    (appears in left column)</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Services shown in sidebar with icons
+                                </p>
                             </div>
                         </div>
 
-                        <div class="space-y-8" id="sectionsContainer">
-                            <!-- Sections will be added here -->
+                        <div class="space-y-4 grid grid-cols-1 md:grid-cols-2 gap-4" id="servicesContainer">
+                            <!-- Services will be added here -->
                         </div>
 
-                        <div class="mt-8">
-                            <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-3">
-                                Add New Section Type
-                            </label>
-                            <div class="flex flex-wrap gap-2">
-                                <button type="button" onclick="addTextSection()"
-                                    class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100">
-                                    <i class="fi fi-rr-text translate-y-0.5 mr-2"></i>Text Content
-                                </button>
-                                <button type="button" onclick="addTwoColumnSection()"
-                                    class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100">
-                                    <i class="fi fi-rr-columns translate-y-0.5 mr-2"></i>Two Columns
-                                </button>
-                                <button type="button" onclick="addImageGallerySection()"
-                                    class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100">
-                                    <i class="fi fi-rr-gallery translate-y-0.5 mr-2"></i>Image Gallery
-                                </button>
-                                <button type="button" onclick="addStatsSection()"
-                                    class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100">
-                                    <i class="fi fi-rr-stats translate-y-0.5 mr-2"></i>Statistics
-                                </button>
+                        <button type="button" onclick="addService()"
+                            class="mt-4 inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                            <i class="fi fi-rr-plus"></i>
+                            Add Service
+                        </button>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-tags text-primary"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                                    Tags
+                                </h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Project tags for categorization</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Tags (comma-separated) *
+                                </label>
+                                <input type="text" name="tags" required
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="E-commerce, Sustainability, UX Design, Web Development">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Metrics Section -->
+                    <!-- Metrics & Results -->
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                                 <i class="fi fi-rr-stats text-primary"></i>
                             </div>
                             <div>
@@ -395,65 +630,90 @@
                             Add Metric
                         </button>
 
-                        <!-- Testimonial -->
-                        <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Client Testimonial
-                            </h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                        Testimonial
-                                    </label>
-                                    <select name="testimonial" id="testimonial"
-                                        class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                        required>
-                                        <option value="">Select Testimonial</option>
-                                        <option value="1">Testimonial 1</option>
-                                        <option value="2">Testimonial 2</option>
-                                        <option value="3">Testimonial 3</option>
-                                    </select>
-                                </div>
-                                
-                            </div>
+                        <!-- Results Section Content -->
+                        <div class="mt-8">
+                            <label for="results_content"
+                                class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                Results Section Content
+                            </label>
+                            <textarea id="results_content" name="results_content" rows="3"
+                                class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                placeholder="The redesign delivered significant improvements across key performance indicators"></textarea>
                         </div>
                     </div>
 
-                    <!-- Gallery Images -->
+                    <!-- Testimonial Section -->
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                                <i class="fi fi-rr-images text-primary"></i>
+                            <div class="min-w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <i class="fi fi-rr-comment text-primary"></i>
                             </div>
                             <div>
                                 <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                                    Additional Images
+                                    Client Testimonial
                                 </h2>
-                                <p class="text-sm text-gray-600 dark:text-gray-300">Gallery images for design solutions
-                                    section</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Client feedback and endorsement</p>
                             </div>
                         </div>
 
-                        <button type="button" onclick="addMetric()"
-                            class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fi fi-rr-plus"></i>
-                            Add Images to Gallery
-                        </button>
+                        <div class="space-y-4">
+                            <!-- Testimonial Quote -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Testimonial Quote *
+                                </label>
+                                <textarea name="testimonial_quote" rows="4" required
+                                    class="w-full px-4 py-3 text-sm text-gray-600 dark:text-gray-300 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="&quot;The Clever team transformed our digital presence beyond expectations...&quot;"></textarea>
+                            </div>
+
+                            <!-- Client Info -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Client Name *
+                                    </label>
+                                    <input type="text" name="testimonial_client" required
+                                        class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                        placeholder="Sarah Johnson">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                        Client Title *
+                                    </label>
+                                    <input type="text" name="testimonial_title" required
+                                        class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                        placeholder="CEO, Eco Market">
+                                </div>
+                            </div>
+
+                            <!-- Client Avatar -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                                    Client Avatar URL
+                                </label>
+                                <input type="url" name="testimonial_avatar"
+                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                    placeholder="https://randomuser.me/api/portraits/women/45.jpg">
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Form Actions -->
                     <div class="p-6 bg-gray-50 dark:bg-gray-900/50 rounded-b-xl">
-                        <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+                        <div class="w-full flex items-center justify-between md:flex-row flex-col gap-4">
                             <button type="button" onclick="window.history.back()"
-                                class="px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+                                class="w-full md:w-auto px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
                                 Cancel
                             </button>
-                            <div class="flex gap-3">
+                            <div class="w-full md:w-auto flex gap-3">
                                 <button type="button" id="saveDraft"
-                                    class="px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+                                    class="w-full md:w-auto px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium truncate">
                                     Save as Draft
                                 </button>
                                 <button type="submit"
-                                    class="px-6 py-2.5 bg-primary hover:bg-primary-dark text-sm text-white rounded-lg transition-colors font-medium shadow-sm">
+                                    class="w-full md:w-auto px-6 py-2.5 bg-primary hover:bg-primary-dark text-sm text-white rounded-lg transition-colors font-medium shadow-sm truncate">
                                     Publish Case Study
                                 </button>
                             </div>
@@ -463,6 +723,7 @@
             </div>
         </div>
     </section>
+
     <!-- scripts -->
     <script src="../../../assets/js/sidebar.js" defer></script>
 
@@ -490,6 +751,146 @@
 
     <!-- Add Project -->
     <script src="../../assets/js/add_project.js" defer></script>
+
+    <script>
+        // Service management
+        let serviceCount = 1;
+
+        function addService ()
+        {
+            serviceCount++;
+            const servicesContainer = document.getElementById( 'servicesContainer' );
+
+            const serviceItem = document.createElement( 'div' );
+            serviceItem.className = 'service-item gr p-4 border border-gray-200 dark:border-gray-700 rounded-xl mt-4';
+            serviceItem.innerHTML = `
+        <div class="relative flex items-center sm:flex-row flex-col gap-4 mb-4">
+            <div class="w-full flex-1">
+                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                    Service Name
+                </label>
+                <input type="text" name="service_name[]" required
+                    class="w-full px-3 py-2 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-700"
+                    placeholder="UI Design">
+            </div>
+            <div class="w-full flex-1">
+                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                    Icon
+                </label>
+                <select name="service_icon[]" required
+                    class="w-full px-3 py-2 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <option value="fi-rr-search">Search (UX Research)</option>
+                    <option value="fi-rr-palette">Palette (UI Design)</option>
+                    <option value="fi-rr-computer">Computer (Development)</option>
+                    <option value="fi-rr-mobile">Mobile (Mobile Dev)</option>
+                    <option value="fi-rr-chart-pie">Chart (Analytics)</option>
+                    <option value="fi-rr-test-tube">Test Tube (Testing)</option>
+                    <option value="fi-rr-rocket">Rocket (Launch)</option>
+                    <option value="fi-rr-users">Users (Team)</option>
+                    <option value="fi-rr-lightbulb">Lightbulb (Strategy)</option>
+                    <option value="fi-rr-briefcase">Briefcase (Consulting)</option>
+                </select>
+            </div>
+            <button type="button" onclick="removeService(this)" class="sm:static absolute top-0 right-0 sm:mt-6 mt-0 text-red-500 hover:text-red-700">
+                <i class="fi fi-rr-trash"></i>
+            </button>
+        </div>
+    `;
+
+            servicesContainer.appendChild( serviceItem );
+        }
+
+        function removeService ( button )
+        {
+            if ( document.querySelectorAll( '.service-item' ).length > 1 )
+            {
+                button.closest( '.service-item' ).remove();
+            } else
+            {
+                alert( 'At least one service is required.' );
+            }
+        }
+
+        // Metric management
+        let metricCount = 1;
+
+        function addMetric ()
+        {
+            metricCount++;
+            const metricsContainer = document.getElementById( 'metricsContainer' );
+
+            const metricItem = document.createElement( 'div' );
+            metricItem.className = 'metric-item p-4 border border-gray-200 dark:border-gray-700 rounded-xl';
+            metricItem.innerHTML = `
+        <div class="relative flex items-center sm:flex-row flex-col gap-4 mb-4">
+            <div class="w-full flex-1">
+                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                    Metric Value
+                </label>
+                <input type="text" name="metric_value[]" required
+                    class="w-full px-3 py-2 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-700"
+                    placeholder="40%">
+            </div>
+            <div class="w-full flex-1">
+                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
+                    Metric Label
+                </label>
+                <input type="text" name="metric_label[]" required
+                    class="w-full px-3 py-2 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-700"
+                    placeholder="Reduction in bounce rate">
+            </div>
+            <button type="button" onclick="removeMetric(this)" class="sm:static absolute top-0 right-0 sm:mt-6 mt-0 text-red-500 hover:text-red-700">
+                <i class="fi fi-rr-trash"></i>
+            </button>
+        </div>
+    `;
+
+            metricsContainer.appendChild( metricItem );
+        }
+
+        function removeMetric ( button )
+        {
+            if ( document.querySelectorAll( '.metric-item' ).length > 1 )
+            {
+                button.closest( '.metric-item' ).remove();
+            } else
+            {
+                alert( 'At least one metric is required.' );
+            }
+        }
+
+        // Form submission
+        document.getElementById( 'addProjectForm' ).addEventListener( 'submit', function ( e )
+        {
+            e.preventDefault();
+            // Collect form data and handle submission
+            const formData = new FormData( this );
+            const data = Object.fromEntries( formData.entries() );
+
+            // Handle arrays for services and metrics
+            data.services_list = [];
+            data.metrics_list = [];
+
+            // You would typically send this data to your backend here
+            console.log( 'Form data:', data );
+
+            // Show success message
+            alert( 'Project saved successfully!' );
+            // window.location.href = '/projects'; // Redirect to projects page
+        } );
+
+        // Save draft functionality
+        document.getElementById( 'saveDraft' ).addEventListener( 'click', function ()
+        {
+            const formData = new FormData( document.getElementById( 'addProjectForm' ) );
+            const data = Object.fromEntries( formData.entries() );
+
+            // Save to localStorage or send to backend for draft
+            localStorage.setItem( 'projectDraft', JSON.stringify( data ) );
+
+            alert( 'Draft saved successfully!' );
+        } );
+    </script>
 
 
 </body>
