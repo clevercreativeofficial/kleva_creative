@@ -146,7 +146,7 @@
     </div>
 
 
-    <!-- Add Project Page - Case Study Structure -->
+    <!-- Edit Project Page -->
     <section class="ml-[70px] w-[calc(100vw-70px)] min-h-screen bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <!-- Page Header -->
@@ -154,10 +154,10 @@
                 <div class="flex md:items-center items-start justify-between md:flex-row flex-col gap-6 mb-6">
                     <div>
                         <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-                            Create New Case Study
+                            Edit Case Study
                         </h1>
                         <p class="text-gray-600 dark:text-gray-300">
-                            Build a compelling project story matching the case study layout
+                            Update your project story
                         </p>
                     </div>
                     <button type="button" onclick="window.history.back()"
@@ -170,17 +170,27 @@
 
             <!-- Recommended Message -->
             <div class="sm:hidden b-8 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 
-            dark:border-amber-800/50 dark:bg-amber-900/20 dark:text-amber-200 mb-8">
+        dark:border-amber-800/50 dark:bg-amber-900/20 dark:text-amber-200 mb-8">
                 <span class="mt-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-amber-200 text-xs font-bold text-amber-900 
-                 dark:bg-amber-800 dark:text-amber-100">
+             dark:bg-amber-800 dark:text-amber-100">
                     !
                 </span>
 
                 <p class="leading-relaxed">
                     <strong class="font-semibold">Recommended:</strong>
-                    For the best experience and accuracy, create your project (case study) on a computer or widescreen
-                    device.
+                    For the best editing experience, use a computer or widescreen device.
                 </p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState"
+                class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 mb-8 p-8 text-center hidden">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-700 dark:border-gray-300 mx-auto mb-4">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Loading project data...</p>
             </div>
 
             <!-- Main Form -->
@@ -728,11 +738,11 @@ Created 'Impact Dashboard' showing collective customer savings"></textarea>
                             <div class="w-full md:w-auto flex gap-3">
                                 <button type="button" id="saveDraft"
                                     class="w-full md:w-auto px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium truncate">
-                                    Save as Draft
+                                    Update as Draft
                                 </button>
                                 <button type="submit"
                                     class="w-full md:w-auto px-6 py-2.5 bg-primary hover:bg-primary-dark text-sm text-white rounded-lg transition-colors font-medium shadow-sm truncate">
-                                    Publish Case Study
+                                    Update Case Study
                                 </button>
                             </div>
                         </div>
@@ -769,6 +779,10 @@ Created 'Impact Dashboard' showing collective customer savings"></textarea>
 
     <!-- Add Project -->
     <script src="../../assets/js/add_project.js" defer></script>
+
+    <!-- Edit Project -->
+    <script src="../../assets/js/edit_project.js" defer></script>
+
 
 </body>
 
