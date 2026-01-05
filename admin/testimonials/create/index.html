@@ -4,209 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="italafrica">
+    <meta name="description"
+        content="Contact Clever Creative, a professional graphic designer and web developer. Reach out to discuss your project, request a quote, or start a collaboration.">
+    <meta name="keywords"
+        content="contact, graphic designer, web developer, hire, freelance, creative, collaboration, project inquiry, Clever Creative">
+    <meta name="author" content="Clever Creative">
+    <link rel="canonical" href="https://clevercreative.com/contact/">
+    <meta property="og:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta property="og:description"
+        content="Get in touch with Clever Creative for graphic design and web development services. Let's bring your ideas to life.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clevercreative.com/contact/">
+    <meta property="og:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta name="twitter:description"
+        content="Contact Clever Creative for professional graphic design and web development services.">
+    <meta name="twitter:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <title>Contact - Clever Creative | Graphic Designer & Web Developer</title>
+
+    <meta name="theme-color" content="#748260">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../../../../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../assets/favicon/favicon.ico" type="image/x-icon">
 
     <!-- style -->
-    <link rel="stylesheet" href="../../../../assets/css/style.css">
-    <title>Italafrica Group | Home</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Flaticon Icons -->
+    <!-- flaticon icons -->
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 
-    <!-- Quill -->
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom style -->
+    <script src="../../../assets/js/tailwindConfig.js"></script>
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
 </head>
 
-<body class="bg-gray-950">
+<body class="bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
     <!-- loader -->
-    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-gray-950 z-[100]">
+    <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
-            <div
-                class="animate-spin rounded-full h-20 w-20 flex justify-center items-center border-b-2 border-r-2 border-green-700">
-                <div
-                    class="animate-spin rounded-full h-16 w-16 flex justify-center items-center border-b-2 border-r-2 border-white">
-                </div>
+            <div class="animate-bounce">
+                <img class="w-16 animate-pulse" src="../../assets/images/logo.svg" alt="">
             </div>
         </div>
     </div>
 
-    <!-- overlay -->
-    <div class="overlay fixed top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-75 z-50 hidden"></div>
-
     <!-- navbar -->
-    <nav class="sticky top-0 h-[80px] backdrop-blur-lg bg-gray-950 bg-opacity-75 border-b border-gray-900 z-50">
+    <nav
+        class="sticky top-0 h-[80px] backdrop-blur-lg bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 z-50">
         <div class="w-full h-full px-3 flex justify-between items-center">
             <div id="logo-container" class="w-[250px] flex items-center justify-between gap-3 z-20">
                 <div id="logo" class="w-10 py-4">
                     <a href="/">
-                        <img src="../../../../assets/images/logo/logo_bc.svg" alt="logo">
+                        <img src="../../../assets/images/logo.svg" alt="logo">
                     </a>
                 </div>
                 <div id="menu-bar"
-                    class="w-8 h-8 flex items-center justify-center text-white rounded cursor-pointer ml-2 z-50 text-center">
+                    class="w-8 h-8 flex items-center justify-center text-gray-700 dark:text-gray-300 rounded cursor-pointer ml-2 z-50">
                     <i class="fi fi-rr-sidebar-flip text-lg"></i>
                 </div>
             </div>
-            <div class="flex items-center gap-2">
-                <p class="sm:block hidden text-white text-sm">Awa Melvine</p>
-                <i class="fi fi-rr-circle-user translate-y-0.5 text-gray-400 text-2xl"></i>
+            <div
+                class="w-10 h-10 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+                <i class="fi fi-rr-user inline-block"></i>
             </div>
         </div>
     </nav>
 
     <!-- sidebar -->
     <div id="sidebar"
-        class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-gray-950 overflow-x-hidden border-r border-gray-900 z-20">
+        class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-20">
         <ul class="flex flex-col gap-2">
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg bg-green-700" href="/admin">
-                    <i class="fi fi-rr-dashboard text-[16px] translate-y-0.5 inline-block mx-1"></i>
+                <a class="inline-block text-sm h-[40px] w-full text-white px-3 py-2 rounded-lg bg-primary"
+                    href="/admin">
+                    <i class="fi fi-rr-dashboard mx-1"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/projects">
-                    <i class="fi fi-rr-excavator text-[16px] translate-y-0.5 inline-block mx-1"></i>
+                    <i class="fi fi-rr-briefcase text-primary mx-1"></i>
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/products">
-                    <i class="fi fi-rr-boxes text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Products</span>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/partners">
+                    <i class="fi fi-rr-users text-primary mx-1"></i>
+                    <span>Partners</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-90 duration-300"
-                    href="/admin/users">
-                    <i class="fi fi-rr-users translate-y-0.5 inline-block mx-1"></i>
-                    <span>Users</span>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/resume">
+                    <i class="fi fi-rr-document text-primary mx-1"></i>
+                    <span>Resume</span>
                 </a>
             </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/faqs">
-                    <i class="fi fi-rr-comments-question text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Faqs</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/subscribers/">
-                    <i class="fi fi-rr-newsletter-subscribe text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Subscribers</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-900 duration-300"
-                    href="/admin/address">
-                    <i class="fi fi-rr-marker text-[16px] translate-y-0.5 inline-block mx-1"></i>
-                    <span>Address</span>
-                </a>
-            </li>
+
         </ul>
 
-        <div id="logout" class="absolute bottom-2 left-0 w-[275px] px-3 text-center">
-            <a href=""
-                class="inline-block text-sm w-full text-gray-300 px-4 py-2 rounded-lg hover:bg-rose-500 hover:text-white bg-gray-900 duration-300">
-                <i class="fi fi-rr-sign-out-alt translate-y-0.5 inline-block mx-1"></i>
-                <span>Logout</span>
-            </a>
+        <ul class="absolute bottom-24 left-0 w-full flex items-center px-3">
+            <div id="themeToggle"
+                class="inline-block text-sm h-[40px] w-full flex items-center justify-center text-center text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer duration-300">
+                <div class="flex items-center justify-center">
+                    <span class="moon"><i class="fi fi-rr-moon text-primary"></i></span>
+                    <span class="sun"><i class="fi fi-rr-sun text-primary"></i></span>
+                    <li><span class="ml-2">Theme</span></li>
+                </div>
+            </div>
+        </ul>
+
+        <!-- User Profile -->
+        <div id="logout" class="absolute bottom-4 left-0 w-[275px] px-3">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-100 dark:bg-gray-800">
+                <div id="userProfile" class="flex items-center justify-center gap-3">
+                    <div class="min-w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                        <i class="fi fi-rr-user text-primary"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium text-sm text-gray-800 dark:text-gray-100">Admin User</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">admin@kleva.com</p>
+                    </div>
+                </div>
+                <a href="login.html" class="p-2 text-gray-500 hover:text-red-500 transition-colors">
+                    <i class="fi fi-rr-sign-out-alt"></i>
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- Main Content Section -->
-    <section class="ml-[70px] w-[calc(100vw-70px)] min-h-[calc(100vh-80px)] md:py-8 py-4 md:px-6 px-3 bg-gray-950">
-        <div class="max-w-4xl mx-auto">
-            <!-- Header Section -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                <div>
-                    <h1 class="text-2xl font-semibold text-gray-100">Add New User</h1>
-                    <p class="text-sm text-gray-400 mt-1">Fill in the details below to add a new
-                        user</p>
+    <!-- add_testimonial.php -->
+    <section class="ml-[70px] w-[calc(100vw-70px)] min-h-screen bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-3xl mx-auto px-4 py-8">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">Add Testimonial</h1>
+                        <p class="text-gray-600 dark:text-gray-400">Add new client feedback</p>
+                    </div>
+                    <button type="button" onclick="window.history.back()"
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        <i class="fi fi-rr-arrow-left"></i>
+                        Back
+                    </button>
                 </div>
-                <a href="/admin/users"
-                    class="sm:w-fit w-full h-10 flex justify-center items-center text-sm gap-2 px-4 rounded-lg bg-green-700 text-gray-200 hover:bg-gray-700 transition-colors shadow-sm">
-                    <i class="fi fi-rr-list text-sm translate-y-0.5 inline-block"></i>
-                    <div>Users</div>
-                </a>
             </div>
 
-            <!-- Category Form -->
-            <div
-                class="md:bg-gray-900 bg-transparent rounded-xl shadow-sm border md:border-gray-800 border-transparent md:p-6 p-0">
-                <form action="" class="grid gap-2">
+            <!-- Form -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                <form id="addTestimonialForm" class="p-6 space-y-6">
+                    <!-- Client Info -->
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Client Name
+                                *</label>
+                            <input type="text" name="client_name" required
+                                class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                placeholder="John Doe">
+                            </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        
-                        <div class="space-y-1">
-                            <input type="text" id="productTitle" placeholder="First name"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                        </div>
-
-                        <div class="space-y-1">
-                            <input type="text" id="productTitle" placeholder="Last name"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        
-                        <div class="space-y-1">
-                            <input type="text" id="productTitle" placeholder="Username"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Client Title
+                                *</label>
+                            <input type="text" name="client_title" required
+                                class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                placeholder="CEO, Company Inc.">
                         </div>
 
-                        <div class="space-y-1">
-                            <input type="text" id="productTitle" placeholder="Email"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        
-                        <div class="space-y-1">
-                            <input type="password" id="productTitle" placeholder="Password"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                        </div>
-
-                        <div class="space-y-1">
-                            <input type="text" id="productTitle" placeholder="Confirm password"
-                                required
-                                class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Client Avatar
+                                (URL)</label>
+                            <input type="url" name="client_avatar"
+                                class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                                placeholder="https://example.com/avatar.jpg">
                         </div>
                     </div>
 
-                    <div class="space-y-1">
-                        <select id="productCategory" required
-                            class="w-full md:bg-gray-800 bg-gray-900 text-sm text-gray-200 outline-none border md:border-gray-700 border-gray-800 focus:border-green-500 duration-200 p-2.5 rounded-lg">
-                            <option value="" disabled selected>Select a role</option>
-                            <option value="furniture">Author</option>
-                            <option value="lighting">Admin</option>
+                    <!-- Rating -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-3">Rating</label>
+                        <div class="flex gap-1" id="ratingStars">
+                            <button type="button" data-rating="1"
+                                class="text-2xl text-gray-300 hover:text-yellow-400 rating-star">
+                                <i class="fi fi-rr-star"></i>
+                            </button>
+                            <button type="button" data-rating="2"
+                                class="text-2xl text-gray-300 hover:text-yellow-400 rating-star">
+                                <i class="fi fi-rr-star"></i>
+                            </button>
+                            <button type="button" data-rating="3"
+                                class="text-2xl text-gray-300 hover:text-yellow-400 rating-star">
+                                <i class="fi fi-rr-star"></i>
+                            </button>
+                            <button type="button" data-rating="4"
+                                class="text-2xl text-gray-300 hover:text-yellow-400 rating-star">
+                                <i class="fi fi-rr-star"></i>
+                            </button>
+                            <button type="button" data-rating="5"
+                                class="text-2xl text-gray-300 hover:text-yellow-400 rating-star">
+                                <i class="fi fi-rr-star"></i>
+                            </button>
+                        </div>
+                        <input type="hidden" name="rating" value="5">
+                    </div>
+
+                    <!-- Testimonial Content -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Testimonial
+                            *</label>
+                        <textarea name="testimonial" rows="5" required
+                            class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
+                            placeholder="Client's feedback..."></textarea>
+                    </div>
+
+                    <!-- Project Link -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Related
+                            Project</label>
+                        <select name="project_id"
+                            class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700">
+                            <option value="">Select Project (Optional)</option>
+                            <option value="1">Eco Market Redesign</option>
+                            <option value="2">TechCorp Mobile App</option>
+                            <option value="3">CreativeCo Branding</option>
                         </select>
-                        <p class="text-xs text-gray-400">Choose a role</p>
                     </div>
 
-                    <!-- Form Actions -->
-                    <div class="flex flex-col sm:flex-row justify-end gap-3 pt-4">
+                    <!-- Display Options -->
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3">
+                            <input type="checkbox" name="is_featured" class="rounded accent-primary">
+                            <span class="text-sm text-gray-800 dark:text-gray-100">Mark as featured</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="checkbox" name="is_published" class="rounded accent-primary" checked>
+                            <span class="text-sm text-gray-800 dark:text-gray-100">Publish immediately</span>
+                        </label>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="pt-6 border-t border-gray-200 dark:border-gray-700 flex gap-4">
+                        <button type="button" onclick="window.history.back()"
+                            class="flex-1 px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Cancel
                         </button>
                         <button type="submit"
-                            class="px-6 py-2.5 rounded-lg text-sm text-white bg-green-700 hover:bg-green-800 transition-colors duration-200 shadow-sm">
-                            Create User
+                            class="flex-1 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90">
+                            Save Testimonial
                         </button>
                     </div>
                 </form>
@@ -214,140 +272,126 @@
         </div>
     </section>
 
-
     <!-- scripts -->
-    <script type="text/javascript" defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuBar = document.getElementById("menu-bar");
-            const logo = document.getElementById("logo");
-            const logoBox = document.getElementById('logo-container')
-            const sidebar = document.getElementById("sidebar");
-            const logout = document.getElementById("logout");
-            const logoutIcon = document.querySelector("#logout i");
-            const labelNames = document.querySelectorAll("span");
+    <script src="../../../assets/js/sidebar.js" defer></script>
 
-            // Define screen size breakpoint
-            const isSmallDevice = window.innerWidth <= 768; // Adjust breakpoint if needed
+    <!-- custom color -->
+    <script src="../../../assets/js/tailwind_config.js"></script>
 
-            if (!isSmallDevice) {
-                // On wider screens, load state from localStorage
-                const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
-                if (isCollapsed) {
-                    collapseSidebar();
-                } else {
-                    expandSidebar();
-                }
-            } else {
-                // On small devices, always collapse by default
-                collapseSidebar();
-            }
+    <!-- Slick carousel -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-            menuBar.addEventListener("click", () => {
-                const isNowCollapsed = sidebar.classList.toggle("w-[70px]");
-                logout.classList.toggle("w-[70px]");
-                logoutIcon.classList.toggle("mx-1");
-                logo.classList.toggle("hidden");
-                logoBox.classList.toggle("w-[70px]");
-                labelNames.forEach(label => label.classList.toggle("hidden"));
 
-                // Only store state in localStorage for wider screens
-                if (!isSmallDevice) {
-                    localStorage.setItem("sidebar-collapsed", isNowCollapsed);
-                }
-            });
+    <!-- Form Submission -->
+    <script src="../../../assets/js/formValidation.js" defer></script>
 
-            function collapseSidebar() {
-                sidebar.classList.add("w-[70px]");
-                logout.classList.add("w-[70px]");
-                logoutIcon.classList.add("mx-1");
-                logo.classList.add("hidden");
-                logoBox.classList.add("w-[70px]");
-                labelNames.forEach(label => label.classList.add("hidden"));
-            }
+    <!-- General scripts -->
+    <script src="../../../assets/js/scripts.js" defer></script>
 
-            function expandSidebar() {
-                sidebar.classList.remove("w-[70px]");
-                logout.classList.remove("w-[70px]");
-                logoutIcon.classList.remove("mx-1");
-                logo.classList.remove("hidden");
-                logoBox.classList.remove("w-[70px]");
-                labelNames.forEach(label => label.classList.remove("hidden"));
-            }
-        });
-    </script>
+    <!-- Dark mode toggle -->
+    <script src="../../../assets/js/theme.js" defer></script>
 
-    <!-- jQuery for Loader (if needed) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Testimonials -->
+    <script src="../../../assets/js/testimonials.js" defer></script>
+
     <script>
-        $(window).on("load", function () {
-            $("#loader").fadeOut();
-        });
-    </script>
+        // Rating stars
+        document.querySelectorAll( '.rating-star' ).forEach( star =>
+        {
+            star.addEventListener( 'click', function ()
+            {
+                const rating = this.getAttribute( 'data-rating' );
+                setRating( rating );
+            } );
+        } );
 
-    <!-- Copyright Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const copyrightElement = document.getElementById("copyright");
-            if (copyrightElement) {
-                copyrightElement.innerHTML = new Date().getFullYear();
-            }
-        });
-    </script>
-
-    <!-- JavaScript for Image Previews & Removal -->
-    <script>
-        const imageInput = document.getElementById('projectImages');
-        const previewContainer = document.getElementById('imagePreview');
-        let uploadedImages = []; // Stores selected files
-
-        // Handle file selection
-        imageInput.addEventListener('change', function (event) {
-            const files = Array.from(event.target.files);
-
-            files.forEach(file => {
-                if (file.type.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        uploadedImages.push({
-                            file: file,
-                            preview: e.target.result
-                        });
-                        updatePreview();
-                    };
-                    reader.readAsDataURL(file);
+        function setRating ( rating )
+        {
+            document.querySelectorAll( '.rating-star' ).forEach( ( star, index ) =>
+            {
+                if ( index < rating )
+                {
+                    star.classList.add( 'text-yellow-400' );
+                    star.classList.remove( 'text-gray-300' );
+                } else
+                {
+                    star.classList.remove( 'text-yellow-400' );
+                    star.classList.add( 'text-gray-300' );
                 }
-            });
-        });
-
-        // Update the preview UI
-        function updatePreview() {
-            previewContainer.innerHTML = '';
-
-            uploadedImages.forEach((image, index) => {
-                const previewItem = document.createElement('div');
-                previewItem.className = 'relative group rounded-lg overflow-hidden border border-gray-700';
-
-                previewItem.innerHTML = `
-                <img src="${image.preview}" class="w-full h-32 object-cover">
-                <button type="button" onclick="removeImage(${index})" 
-                    class="absolute top-2 right-2 w-8 h-8 bg-red-600 text-white p-1 rounded-full md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fi fi-rr-trash text-xs"></i>
-                </button>
-            `;
-                previewContainer.appendChild(previewItem);
-            });
-
-            // Sync with original file input (for form submission)
-            const dataTransfer = new DataTransfer();
-            uploadedImages.forEach(image => dataTransfer.items.add(image.file));
-            imageInput.files = dataTransfer.files;
+            } );
+            document.querySelector( 'input[name="rating"]' ).value = rating;
         }
 
-        // Remove an image
-        window.removeImage = function (index) {
-            uploadedImages.splice(index, 1);
-            updatePreview();
-        };
+        // Tags
+        const tagInput = document.getElementById( 'tagInput' );
+        const tagsContainer = tagInput.parentElement.querySelector( '.flex-wrap' );
+
+        tagInput.addEventListener( 'keypress', function ( e )
+        {
+            if ( e.key === 'Enter' && this.value.trim() )
+            {
+                e.preventDefault();
+                addTag( this.value.trim() );
+                this.value = '';
+            }
+        } );
+
+        function addTag ( text )
+        {
+            const tag = document.createElement( 'span' );
+            tag.className = 'tag inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-sm cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600';
+            tag.innerHTML = `
+        <span>${ text }</span>
+        <i class="fi fi-rr-times text-xs" onclick="removeTag(this)"></i>
+    `;
+            tagsContainer.appendChild( tag );
+        }
+
+        function removeTag ( icon )
+        {
+            icon.closest( '.tag' ).remove();
+        }
+
+        // Remove existing tags
+        document.querySelectorAll( '.tag i' ).forEach( icon =>
+        {
+            icon.addEventListener( 'click', function ()
+            {
+                removeTag( this );
+            } );
+        } );
+
+        // Form submission
+        document.getElementById( 'addTestimonialForm' ).addEventListener( 'submit', async function ( e )
+        {
+            e.preventDefault();
+
+            const formData = new FormData( this );
+            const data = Object.fromEntries( formData.entries() );
+
+            // Collect tags
+            data.tags = Array.from( document.querySelectorAll( '.tag span' ) ).map( span => span.textContent );
+
+            try
+            {
+                // Show loading
+                const submitBtn = this.querySelector( 'button[type="submit"]' );
+                submitBtn.innerHTML = '<i class="fi fi-rr-spinner animate-spin mr-2"></i>Saving...';
+                submitBtn.disabled = true;
+
+                // API call would go here
+                await new Promise( resolve => setTimeout( resolve, 1000 ) );
+
+                alert( 'Testimonial added successfully!' );
+                window.location.href = 'testimonials.php';
+
+            } catch ( error )
+            {
+                console.error( 'Error:', error );
+                alert( 'Failed to save testimonial' );
+            }
+        } );
     </script>
 </body>
 

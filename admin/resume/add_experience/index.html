@@ -94,6 +94,13 @@
             </li>
             <li>
                 <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/profile">
+                    <i class="fi fi-rr-user text-primary mx-1"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/projects">
                     <i class="fi fi-rr-briefcase text-primary mx-1"></i>
                     <span>Projects</span>
@@ -111,6 +118,13 @@
                     href="/admin/resume">
                     <i class="fi fi-rr-document text-primary mx-1"></i>
                     <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/testimonials/">
+                    <i class="fi fi-rr-review text-primary mx-1"></i>
+                    <span>Testimonials</span>
                 </a>
             </li>
 
@@ -151,12 +165,9 @@
         <div class="max-w-4xl mx-auto px-4 py-8">
             <!-- Page Header -->
             <div class="mb-8">
-                <div class="flex items-center justify-between md:flex-row flex-col gap-6 mb-6">
+                <div class="flex md:items-center items-start justify-between md:flex-row flex-col gap-6 mb-6">
                     <div>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                                <i class="fi fi-rr-briefcase text-blue-500 text-xl"></i>
-                            </div>
                             <div>
                                 <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">
                                     Add Work Experience
@@ -318,68 +329,6 @@
 • Received Employee of the Month award"></textarea>
                             </div>
 
-                            <!-- Skills Used -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Skills Used (comma separated)
-                                </label>
-                                <input type="text" name="skills_used"
-                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                    placeholder="e.g., UI Design, React, Project Management, Figma">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Information -->
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                                <i class="fi fi-rr-settings text-purple-500"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                                    Additional Information
-                                </h2>
-                                <p class="text-sm text-gray-600 dark:text-gray-300">Optional details and display
-                                    settings</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-6">
-                            <!-- Company Website -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Company Website
-                                </label>
-                                <input type="url" name="company_website"
-                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                    placeholder="https://companywebsite.com">
-                            </div>
-
-                            <!-- Company Logo -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Company Logo URL
-                                </label>
-                                <input type="url" name="company_logo"
-                                    class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                    placeholder="https://logo.url/image.png">
-                            </div>
-
-                            <!-- Reference Contact -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
-                                    Reference Contact (optional)
-                                </label>
-                                <div class="space-y-4">
-                                    <input type="text" name="reference_name"
-                                        class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                        placeholder="Reference Name">
-                                    <input type="email" name="reference_email"
-                                        class="w-full px-4 py-3 text-sm text-gray-800 dark:text-gray-100 outline-none border border-gray-300 focus:border-primary dark:focus:border-primary dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-700"
-                                        placeholder="Reference Email">
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -401,29 +350,8 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="checkbox" name="show_on_resume" class="rounded text-primary" checked>
+                                    <input type="checkbox" name="show_on_resume" class="rounded accent-primary" checked>
                                     <span class="text-sm text-gray-800 dark:text-gray-100">Show on resume</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="checkbox" name="is_featured" class="rounded text-primary">
-                                    <span class="text-sm text-gray-800 dark:text-gray-100">Feature this experience
-                                        prominently</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="checkbox" name="show_company_logo" class="rounded text-primary"
-                                        checked>
-                                    <span class="text-sm text-gray-800 dark:text-gray-100">Show company logo</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="checkbox" name="show_duration" class="rounded text-primary" checked>
-                                    <span class="text-sm text-gray-800 dark:text-gray-100">Show employment
-                                        duration</span>
                                 </label>
                             </div>
                         </div>
@@ -431,15 +359,11 @@
 
                     <!-- Form Actions -->
                     <div class="p-6 bg-gray-50 dark:bg-gray-900/50 rounded-b-xl">
-                        <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
-                            <button type="button" onclick="window.history.back()"
-                                class="w-full sm:w-auto px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
-                                Cancel
-                            </button>
-                            <div class="flex gap-3 w-full sm:w-auto">
-                                <button type="button" id="saveDraft"
+                        <div class="flex flex-col sm:flex-row gap-4 justify-end items-center">
+                            <div class="flex sm:flex-row flex-col gap-3 w-full sm:w-auto">
+                                <button type="button" onclick="window.history.back()"
                                     class="w-full sm:w-auto px-6 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
-                                    Save as Draft
+                                    Cancel
                                 </button>
                                 <button type="submit"
                                     class="w-full sm:w-auto px-6 py-2.5 bg-primary hover:bg-primary-dark text-sm text-white rounded-lg transition-colors font-medium shadow-sm">

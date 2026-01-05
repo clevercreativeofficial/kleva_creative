@@ -45,7 +45,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-900">
+<body class="bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
     <!-- loader -->
     <div id="loader" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-[100]">
         <div class="flex flex-col justify-center items-center gap-4 h-full">
@@ -62,7 +62,7 @@
             <div id="logo-container" class="w-[250px] flex items-center justify-between gap-3 z-20">
                 <div id="logo" class="w-10 py-4">
                     <a href="/">
-                        <img src="../../assets/images/logo.svg" alt="logo">
+                        <img src="../../../assets/images/logo.svg" alt="logo">
                     </a>
                 </div>
                 <div id="menu-bar"
@@ -70,14 +70,9 @@
                     <i class="fi fi-rr-sidebar-flip text-lg"></i>
                 </div>
             </div>
-            <div id="themeToggle"
-                class="w-10 h-10 text-primary bg-primary text-white rounded-full shadow-lg flex justify-center items-center cursor-pointer">
-                <span class="sun">
-                    <i class="fi fi-rr-sun inline-block translate-y-0.5"></i>
-                </span>
-                <span class="moon hidden">
-                    <i class="fi fi-rr-moon inline-block translate-y-0.5"></i>
-                </span>
+            <div
+                class="w-10 h-10 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full shadow-lg flex justify-center items-center cursor-pointer">
+                <i class="fi fi-rr-user inline-block"></i>
             </div>
         </div>
     </nav>
@@ -87,65 +82,72 @@
         class="fixed left-0 top-0 w-[275px] pt-24 px-3 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-20">
         <ul class="flex flex-col gap-2">
             <li>
-                <a class="inline-block text-sm w-full text-white px-3 py-2 rounded-lg bg-primary" href="/admin">
+                <a class="inline-block text-sm h-[40px] w-full text-white px-3 py-2 rounded-lg bg-primary"
+                    href="/admin">
                     <i class="fi fi-rr-dashboard mx-1"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/profile">
+                    <i class="fi fi-rr-user text-primary mx-1"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/projects">
-                    <i class="fi fi-rr-briefcase mx-1"></i>
+                    <i class="fi fi-rr-briefcase text-primary mx-1"></i>
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
-                    href="/admin/Partners">
-                    <i class="fi fi-rr-star mx-1"></i>
-                    <span>Skills</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
-                    href="/admin/resume">
-                    <i class="fi fi-rr-document mx-1"></i>
-                    <span>Services</span>
-                </a>
-            </li>
-            <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/partners">
-                    <i class="fi fi-rr-users mx-1"></i>
+                    <i class="fi fi-rr-users text-primary mx-1"></i>
                     <span>Partners</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
                     href="/admin/resume">
-                    <i class="fi fi-rr-document mx-1"></i>
+                    <i class="fi fi-rr-document text-primary mx-1"></i>
                     <span>Resume</span>
                 </a>
             </li>
             <li>
-                <a class="inline-block text-sm w-full text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
-                    href="/admin/resume">
-                    <i class="fi fi-rr-envelope mx-1"></i>
-                    <span>Messages</span>
+                <a class="inline-block text-sm h-[40px] w-full text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 duration-300"
+                    href="/admin/testimonials/">
+                    <i class="fi fi-rr-review text-primary mx-1"></i>
+                    <span>Testimonials</span>
                 </a>
             </li>
 
         </ul>
 
-        <!-- User Profile -->
-        <div class="absolute bottom-6 left-6 right-6">
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-100 dark:bg-gray-800">
-                <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                    <i class="fi fi-rr-user text-primary"></i>
+        <ul class="absolute bottom-24 left-0 w-full flex items-center px-3">
+            <div id="themeToggle"
+                class="inline-block text-sm h-[40px] w-full flex items-center justify-center text-center text-gray-700 dark:text-gray-400 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer duration-300">
+                <div class="flex items-center justify-center">
+                    <span class="moon"><i class="fi fi-rr-moon text-primary"></i></span>
+                    <span class="sun"><i class="fi fi-rr-sun text-primary"></i></span>
+                    <li><span class="ml-2">Theme</span></li>
                 </div>
-                <div class="flex-1">
-                    <p class="font-medium text-sm text-gray-800 dark:text-gray-100">Admin User</p>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">admin@kleva.com</p>
+            </div>
+        </ul>
+
+        <!-- User Profile -->
+        <div id="logout" class="absolute bottom-4 left-0 w-[275px] px-3">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-100 dark:bg-gray-800">
+                <div id="userProfile" class="flex items-center justify-center gap-3">
+                    <div class="min-w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                        <i class="fi fi-rr-user text-primary"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium text-sm text-gray-800 dark:text-gray-100">Admin User</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">admin@kleva.com</p>
+                    </div>
                 </div>
                 <a href="login.html" class="p-2 text-gray-500 hover:text-red-500 transition-colors">
                     <i class="fi fi-rr-sign-out-alt"></i>
