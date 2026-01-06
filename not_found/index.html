@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Clever Creative, a professional graphic designer and web developer. Reach out to discuss your project, request a quote, or start a collaboration.">
+    <meta name="keywords"
+        content="contact, graphic designer, web developer, hire, freelance, creative, collaboration, project inquiry, Clever Creative">
+    <meta name="author" content="Clever Creative">
+    <link rel="canonical" href="https://clevercreative.com/contact/">
+    <meta property="og:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta property="og:description"
+        content="Get in touch with Clever Creative for graphic design and web development services. Let's bring your ideas to life.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clevercreative.com/contact/">
+    <meta property="og:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Clever Creative | Graphic Designer & Web Developer">
+    <meta name="twitter:description"
+        content="Contact Clever Creative for professional graphic design and web development services.">
+    <meta name="twitter:image" content="https://clevercreative.com/assets/images/og-image.jpg">
+    <title>About - Clever Creative | Graphic Designer & Web Developer</title>
+
+    <meta name="theme-color" content="#748260">
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- flaticon icons -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom style -->
+    <script src="../assets/js/tailwindConfig.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+    <div class="max-w-md w-full mx-auto">
+        <!-- 404 Card -->
+        <div
+            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full glow"></div>
+            <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/5 rounded-full glow"></div>
+
+            <!-- Content Section -->
+            <div class="relative p-8 md:p-10 text-center">
+                <!-- Error Number -->
+                <div class="relative mb-6">
+                    <div class="text-8xl font-bold text-gray-200 dark:text-gray-700">404</div>
+                </div>
+
+                <!-- Main Message -->
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-3">Page Not Found</h1>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Oops! The page you're looking for seems to have wandered off. It might have been moved, deleted,
+                        or perhaps never existed.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Current Page Info -->
+        <div class="mt-6 text-center">
+            <div
+                class="inline-flex items-center gap-3 px-4 py-2 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center gap-2">
+                    <i class="fi fi-rr-globe text-gray-500 dark:text-gray-400"></i>
+                    <span class="text-sm text-gray-600 dark:text-gray-400">
+                        Current URL: <span id="current-url"
+                            class="font-medium text-gray-800 dark:text-gray-200 truncate max-w-[200px]"></span>
+                    </span>
+                </div>
+                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+            </div>
+        </div>
+
+        <!-- Helpful Links -->
+        <div class="mt-4 text-center">
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Try these helpful links:</p>
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="/" class="text-xs text-primary hover:underline">Home</a>
+                <span class="text-gray-400">•</span>
+                <a href="/dashboard" class="text-xs text-primary hover:underline">Dashboard</a>
+                <span class="text-gray-400">•</span>
+                <a href="/docs" class="text-xs text-primary hover:underline">Documentation</a>
+                <span class="text-gray-400">•</span>
+                <a href="/blog" class="text-xs text-primary hover:underline">Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Display current URL
+        function updateCurrentURL ()
+        {
+            const currentUrl = window.location.href;
+            const urlElement = document.getElementById( 'current-url' );
+            urlElement.textContent = currentUrl;
+
+            // Truncate if too long
+            if ( currentUrl.length > 40 )
+            {
+                urlElement.textContent = currentUrl.substring( 0, 40 ) + '...';
+            }
+        }
+
+        // Go back button
+        function goBack ()
+        {
+            window.history.back();
+        }
+
+        // Search functionality
+        function handleSearch ()
+        {
+            const searchInput = document.querySelector( 'input[type="text"]' );
+            if ( searchInput.value.trim() )
+            {
+                alert( `Searching for: "${ searchInput.value }"\nThis would normally redirect to search results.` );
+            }
+        }
+
+        // Initialize
+        document.addEventListener( 'DOMContentLoaded', () =>
+        {
+            updateCurrentURL();
+
+            // Add event listener to search button
+            const searchButton = document.querySelector( 'button.bg-primary' );
+            const searchInput = document.querySelector( 'input[type="text"]' );
+
+            searchButton.addEventListener( 'click', handleSearch );
+            searchInput.addEventListener( 'keypress', ( e ) =>
+            {
+                if ( e.key === 'Enter' )
+                {
+                    handleSearch();
+                }
+            } );
+
+            // Add some interactivity to the decorative circles
+            const circles = document.querySelectorAll( '.glow' );
+            circles.forEach( circle =>
+            {
+                circle.addEventListener( 'mouseenter', () =>
+                {
+                    circle.style.transform = 'scale(1.1)';
+                } );
+                circle.addEventListener( 'mouseleave', () =>
+                {
+                    circle.style.transform = 'scale(1)';
+                } );
+            } );
+        } );
+
+        // Optional: Log 404 error
+        console.warn( '404 Page Not Found:', window.location.pathname );
+    </script>
+
+    <!-- dropdown -->
+    <script src="../assets/js/dropdown.js"></script>
+
+    <!-- custom color -->
+    <script src="assets/js/tailwind_config.js"></script>
+
+    <!-- Slick carousel -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../assets/js/slickCarousel.js"></script>
+
+
+    <!-- Form Submission -->
+    <script src="../assets/js/formValidation.js" defer></script>
+
+    <!-- General scripts -->
+    <script src="../assets/js/scripts.js" defer></script>
+
+    <!-- faq -->
+    <script src="../assets/js/faqs.js" defer></script>
+
+    <!-- Dark mode toggle -->
+    <script src="../assets/js/theme.js" defer></script>
+
+
+
+</body>
+
+</html>
