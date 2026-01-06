@@ -175,7 +175,7 @@
                 </div>
 
                 <!-- Stats Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     <!-- Total Projects -->
                     <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-6">
                         <div class="flex items-center justify-between">
@@ -186,20 +186,6 @@
                             </div>
                             <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
                                 <i class="fi fi-rr-briefcase text-blue-500 text-xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Messages -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-6">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">New Messages</p>
-                                <p class="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-2">3</p>
-                                <p class="text-xs text-amber-500 mt-1">Require attention</p>
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                                <i class="fi fi-rr-envelope text-amber-500 text-xl"></i>
                             </div>
                         </div>
                     </div>
@@ -236,38 +222,30 @@
                 <!-- Quick Actions -->
                 <div class="mt-16">
                     <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-6">Quick Actions</h2>
-                    <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
-                        <a href="projects.html?action=add"
-                            class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+                        <a href="/admin/projects/create/"
+                            class="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
                             <div
                                 class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
                                 <i class="fi fi-rr-add text-primary"></i>
                             </div>
                             <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Add Project</span>
                         </a>
-                        <a href="skills.html?action=add"
-                            class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
+                        <a href="/admin/partners/create/"
+                            class="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
                             <div
-                                class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
-                                <i class="fi fi-rr-star text-blue-500"></i>
+                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fi fi-rr-add text-primary"></i>
                             </div>
-                            <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Add Skill</span>
+                            <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Add Partner</span>
                         </a>
-                        <a href="messages.html"
-                            class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
+                        <a href="/admin/testimonials/create/"
+                            class="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
                             <div
-                                class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mx-auto mb-3">
-                                <i class="fi fi-rr-envelope text-amber-500"></i>
+                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fi fi-rr-add text-primary"></i>
                             </div>
-                            <span class="text-sm font-medium text-gray-800 dark:text-gray-100">View Messages</span>
-                        </a>
-                        <a href="settings.html"
-                            class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary bg-white dark:bg-gray-800 hover:bg-primary/5 transition-all duration-300 text-center">
-                            <div
-                                class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center mx-auto mb-3">
-                                <i class="fi fi-rr-settings text-purple-500"></i>
-                            </div>
-                            <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Settings</span>
+                            <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Add Testimonial</span>
                         </a>
                     </div>
                 </div>
