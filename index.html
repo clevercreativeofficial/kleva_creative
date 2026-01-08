@@ -134,32 +134,46 @@
                     class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
                     <!-- Top Bar -->
                     <div class="px-8 py-4 border-b border-gray-100 dark:border-gray-700">
-                        <div class="flex items-center justify-between sm:flex-row flex-col gap-3">
-                            <div class="flex items-center gap-3">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                                        <i class="fi fi-rr-badge-check translate-y-0.5 text-primary"></i>
+                        <div>
+                            <div class="relative flex items-center gap-2">
+                                <div class="relative">
+                                    <div
+                                        class="w-9 h-9 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center shadow-inner">
+                                        <!-- Animated Dot -->
+                                        <div class="relative">
+                                            <div
+                                                class="w-[10px] h-[10px] bg-gradient-to-br from-green-400 to-green-500 rounded-full animate-pulse">
+                                            </div>
+                                            <div
+                                                class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-50">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span class="font-medium text-gray-700 dark:text-gray-300">Senior Creative
-                                        Professional</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Open for
+                                        Collaboration</p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Remote • Available Worldwide
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 mb-4">
+
+                                    <span class="text-sm font-medium text-gray-600 dark:text-gray-400"></span>
                                 </div>
                             </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <i class="fi fi-rr-globe translate-y-0.5 inline-block mr-1"></i>
-                                <span class="font-medium">Remote</span> • Available Worldwide
-                            </div>
+
                         </div>
                     </div>
 
                     <div class="p-8 lg:p-12">
-                        <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        <div class="grid lg:grid-cols-12 gap-10">
                             <!-- Left Column: Profile & Stats -->
                             <div class="lg:col-span-5">
                                 <div class="space-y-8">
                                     <!-- Profile Card -->
-                                    <div class="relative">
+                                    <div class="relative flex flex-col items-center">
                                         <div
-                                            class="relative w-full aspect-square max-w-xs mx-auto overflow-hidden rounded-2xl">
+                                            class="relative w-full aspect-square max-w-xs overflow-hidden rounded-2xl">
                                             <!-- Gradient Border -->
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-primary/20 rounded-2xl p-[2px]">
@@ -190,7 +204,7 @@
                                         </div>
 
                                         <!-- Social Links - Circular -->
-                                        <div class="mt-8 flex justify-center">
+                                        <div class="mt-8 flex sm:justify-start justify-center">
                                             <div class="relative">
                                                 <div
                                                     class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-sm">
@@ -228,14 +242,6 @@
                                 <div class="space-y-6">
                                     <!-- Header -->
                                     <div>
-                                        <div class="flex items-center gap-3 mb-4">
-                                            <div
-                                                class="w-4 h-4 flex items-center justify-center bg-green-500/20 rounded-full animate-pulse">
-                                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                            </div>
-                                            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Open for
-                                                Collaboration</span>
-                                        </div>
                                         <h1
                                             class="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight">
                                             Clever Creative
@@ -250,9 +256,9 @@
                                     <!-- Bio -->
                                     <div class="relative">
                                         <div
-                                            class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/50 to-transparent rounded-full">
+                                            class="hidden lg:block absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/50 to-transparent rounded-full">
                                         </div>
-                                        <p class="text-mg text-gray-600 dark:text-gray-300 leading-relaxed pl-4">
+                                        <p class="text-mg text-gray-600 dark:text-gray-300 leading-relaxed lg:pl-4 pl-0">
                                             Senior creative professional with 9+ years of experience crafting
                                             exceptional
                                             digital experiences. I bridge the gap between stunning visual design and
@@ -335,7 +341,7 @@
                                     <!-- Quick Contact Info -->
                                     <div class="pt-6 border-t border-gray-100 dark:border-gray-700">
                                         <div
-                                            class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
+                                            class="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600 dark:text-gray-400">
                                             <div class="flex items-center gap-2">
                                                 <i class="fi fi-rr-clock translate-y-0.5"></i>
                                                 <span>Response: <span
@@ -359,14 +365,15 @@
 
                     <!-- Bottom Bar -->
                     <div class="px-8 py-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30">
-                        <div class="flex items-center justify-between sm:flex-row flex-col gap-3 sm:text-left text-center">
+                        <div
+                            class="flex items-center justify-between sm:flex-row flex-col gap-3 sm:text-left text-center">
                             <div class="text-sm text-gray-600 dark:text-gray-400">
                                 <i class="fi fi-rr-badge-check translate-y-0.5 inline-block text-primary mr-2"></i>
                                 Certified Professional • 100% Client Satisfaction
                             </div>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
                                 <i class="fi fi-rr-star translate-y-0.5 inline-block text-yellow-500 mr-2"></i>
-                                4.2/5 Average Rating
+                                Top rated
                             </div>
                         </div>
                     </div>
@@ -374,10 +381,11 @@
             </div>
 
             <!-- Decorative Elements -->
-            <div class="absolute -top-2 right-1/4 w-4 h-4 bg-primary/20 rounded-full blur-sm"></div>
-            <div class="absolute bottom-8 left-1/4 w-6 h-6 bg-primary/10 rounded-full blur-sm"></div>
+            <div class="absolute -top-2 right-1/4 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-2 left-1/4 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
         </div>
     </section>
+
 
     <!-- Expertise Showcase -->
     <section class="bg-gray-100 dark:bg-gray-900 py-16">
@@ -539,7 +547,7 @@
                                 25th May 2023
                             </div>
                             <h3
-                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors truncate">
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors line-clamp-1">
                                 E-commerce Platform Redesign
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
@@ -578,7 +586,7 @@
                                 18th April 2023
                             </div>
                             <h3
-                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors truncate">
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors line-clamp-1">
                                 Corporate Brand Identity
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
@@ -617,7 +625,7 @@
                                 12th March 2023
                             </div>
                             <h3
-                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors truncate">
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-primary transition-colors line-clamp-1">
                                 Health & Wellness Mobile App
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
